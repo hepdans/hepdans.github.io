@@ -928,6 +928,12 @@ main > h2 {
   text-align: center;
 }
 
+section {
+  margin: 0 auto;
+  max-width: var(--width-content);
+  padding: var(--space-l) max(1rem, calc(50% - 0.7 * var(--width-content)));
+}
+
 /* navigation */
 
 nav ul li {
@@ -1010,20 +1016,19 @@ main.page {
 
 /* featured pages */
 
-.featured-pages {
+.featured-pages,
+.blog-latest {
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: var(--space-xl) auto;
   padding: 0 var(--space-l);
-  max-width: var(--width-content);
 }
 
 .featured-pages .card {
   display: flex;
   flex-direction: column;
-  margin: var(--space-m) auto;
   width: min(25em, 30%);
 }
 
@@ -1065,16 +1070,6 @@ main.page {
 
 /* latest blog posts */
 
-.blog-latest {
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: var(--space-xl) auto;
-  padding: 0 var(--space-l);
-  max-width: var(--width-content);
-}
-
 .blog-latest h1,
 .blog-latest h2 {
   flex-basis: 100%;
@@ -1097,13 +1092,17 @@ main.page {
   color: var(--color-primary);
 }
 
+.meta small {
+  display: block;
+}
+
 /* instructors page */
 
 .instructor {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin: var(--space-l) auto;
   max-width: calc(0.8 * var(--width-content));
   padding: 0 var(--space-l);
@@ -1166,6 +1165,14 @@ main.page {
   font-style: italic;
 }
 
+/* course pages */
+
+.course section {
+  font-size: 1.1em;
+  margin: var(--space-l) auto;
+  max-width: calc(0.7 * var(--width-content));
+}
+
 /* blog page */
 
 .blog section {
@@ -1174,7 +1181,6 @@ main.page {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  max-width: var(--width-content);
   padding: var(--space-xl);
 }
 
@@ -1190,7 +1196,7 @@ main.page {
 
 /* blog post page */
 
-.blog-post {
+.blog-post section {
   margin: 0 auto;
   max-width: calc(0.8 * var(--width-content));
 }
