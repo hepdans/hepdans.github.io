@@ -1,60 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instructors — Hep Dans</title>
-  <link rel="shortcut icon" href="../../../static/favicon.svg" type="image/svg">
-  <link rel="stylesheet" href="../../../static/hepdans.css">
+  <title>Online Dersler — Hep Dans</title>
+  <link rel="shortcut icon" href="../../static/favicon.svg" type="image/svg">
+  <link rel="stylesheet" href="../../static/hepdans.css">
   
+  <script>
+    var slideIndex = 0;
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 8000);
+    }
+
+    document.addEventListener("DOMContentLoaded", showSlides, false);
+  </script>
+
 </head>
 <body>
   <header>
     <nav aria-label="main navigation">
       <a href="../../">
-        <img src="../../../static/hepdans.svg" alt="Hep Dans logo" width="118" height="56">
+        <img src="../../static/hepdans.svg" alt="Hep Dans logosu" width="118" height="56">
       </a>
       <ul>
         
           
-          <li class="active">
-            <a href="../">About us</a>
+          <li>
+            <a href="../../hakkimizda/">Hakkımızda</a>
             
               <ul>
                 
                   
-                  <li><a href="./">Instructors</a></li>
+                  <li><a href="../../hakkimizda/egitmenler/">Eğitmenler</a></li>
                 
                   
-                  <li><a href="../testimonials/">Testimonials</a></li>
+                  <li><a href="../../hakkimizda/ogrenci-gorusleri/">Öğrenci Görüşleri</a></li>
                 
               </ul>
             
           </li>
         
           
-          <li>
-            <a href="../../lessons/">Lessons</a>
+          <li class="active">
+            <a href="../">Dersler</a>
             
               <ul>
                 
                   
-                  <li><a href="../../lessons/online-lessons/">Online Lessons</a></li>
+                  <li><a href="./">Online Dersler</a></li>
                 
                   
-                  <li><a href="../../lessons/private-lessons/">Private Lessons</a></li>
+                  <li><a href="../ozel-dersler/">Özel Dersler</a></li>
                 
                   
-                  <li><a href="../../lessons/group-lessons/">Group Lessons</a></li>
+                  <li><a href="../grup-dersleri/">Grup Dersleri</a></li>
                 
                   
-                  <li><a href="../../lessons/cocuk-danslari/">Çocuk Dansları</a></li>
+                  <li><a href="../cocuk-danslari/">Çocuk Dansları</a></li>
                 
                   
-                  <li><a href="../../lessons/sirket-ve-kurumlarda-dans/">Şirket ve Kurumlarda Dans</a></li>
+                  <li><a href="../sirket-ve-kurumlarda-dans/">Şirket ve Kurumlarda Dans</a></li>
                 
                   
-                  <li><a href="../../lessons/dugun-dansi/">Düğün Dansı</a></li>
+                  <li><a href="../dugun-dansi/">Düğün Dansı</a></li>
                 
               </ul>
             
@@ -71,46 +89,30 @@
     <nav class="alternatives">
       <ul>
         
-          <li>
-            <a href="../../../hakkimizda/egitmenler/">Türkçe</a>
+          <li class="active">
+            <a href="./">Türkçe</a>
           </li>
         
-          <li class="active">
-            <a href="./">English</a>
+          <li>
+            <a href="../../en/lessons/online-lessons/">English</a>
           </li>
         
       </ul>
     </nav>
   </header>
-  <main class="instructors">
+  <main class="lesson">
     
-  <h1>Instructors</h1>
   
-    <div class="instructor">
-      <p class="title">
-        <small>Dance Instructor</small>
-        Hande Ermiş
-      </p>
-      <div class="text">
-        <p>24 years of professional dancing experience, 20 years of teaching, and countless students who loved dancing. She founded HEP Dans in 2008.</p>
-      </div>
-    </div>
-  
-    <div class="instructor">
-      <p class="title">
-        <small>Dance Assistant</small>
-        Sinem Kütük
-      </p>
-      <div class="text">
-        <p>Sinem Kütük started dancing as one of Hande's students in 2008. She has been an assistant at Hep Dans since 2009.</p>
-      </div>
-    </div>
-  
+
+  <h1>Online Dersler</h1>
+  <section>
+    
+  </section>
 
   </main>
   <footer>
     <small>
-      <p>All rights reserved. Content cannot be used without permission.</p>
+      <p>Tüm hakları saklıdır. İçerikler izinsiz kullanılamaz.</p>
       <p>Hep Dans &copy; 2020</p>
     </small>
     <div class="social">
