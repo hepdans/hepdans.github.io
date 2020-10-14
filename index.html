@@ -13,7 +13,7 @@
   <header>
     <nav aria-label="main navigation">
       <a href="./">
-        <img src="static/hepdans.svg" alt="Hep Dans logosu" width="118" height="56">
+        <img src="static/hepdans.svg" alt="Hep Dans logosu" width="136" height="102">
       </a>
       <ul>
         
@@ -192,88 +192,87 @@
     
   </div>
 
-  <section id="featured-pages">
-    <h1>Öne çıkan sayfalar</h1>
-    <div class="articles">
-      
-        <article>
-          <h1>Hakkımızda</h1>
-          <h2>Bizi tanıyın</h2>
-          <figure>
-            <img src="hakkimizda-hande-ermis.jpg" alt="Hande Ermiş dans stüdyosunda. Sırtı aynaya dönük ayakta duruyor ve gülümsüyor." width="360" height="193">
-          </figure>
-          <p>Hep Dans olarak sizlere Latin danslarını sevdirmek en büyük amacımız. Düzenlediğimiz dans...</p>
-          <footer>
-            <a href="/hakkimizda/">Görüntüle</a>
-          </footer>
-        </article>
-      
-        <article>
-          <h1>Dans edin</h1>
-          <h2>Latin danslarını keşfedin</h2>
-          <figure>
-            <img src="dersler.jpg" alt="Dans stüdyosunda öğretmen ve öğrenciler kollarını açarak poz veriyor." width="360" height="193">
-          </figure>
-          <p>Latin danslarının güzelliğini keşfetmenize son bir adım kaldı. Sosyal Latin dansları, Bachata,...</p>
-          <footer>
-            <a href="/dersler/">Görüntüle</a>
-          </footer>
-        </article>
-      
-        <article>
-          <h1>Öğrenci Görüşleri</h1>
-          <h2>Mutlu öğrencilerimizi dinleyin</h2>
-          <figure>
-            <img src="ogrenci-gorusleri.jpg" alt="Dans stüdyosunda ders sırasında dans eden bir kadın ve bir adam. Her ikisi de gülümsüyor. Arkada dans eden başka çiftler de görünüyor." width="360" height="193">
-          </figure>
-          <p>5 yıldır ESM’de Sosyal Latin dans öğrencisiyim. Eğitmenimiz Hande Ermiş ile dans çalışmalarıma...</p>
-          <footer>
-            <a href="/hakkimizda/ogrenci-gorusleri/">Görüntüle</a>
-          </footer>
-        </article>
-      
-    </div>
+  <section id="instagram">
+    <h1>Instagram</h1>
+    <h2>@hepdans</h2>
   </section>
 
-  <section id="blog-latest">
-    <h1>Son Yazılar</h1>
-    <h2>Püf noktaları, bilmeniz gerekenler, duyurular, gelişmeler</h2>
-    <div class="articles">
-      
-        
-        <article>
-          <figure>
-            <img src="blog/kalabalik-dans-pistlerinde-olmasi-ve-olmamasi-gerekenler/blog-kalabalik-dans-pistis.jpg" alt="" width="560" height="350">
-          </figure>
-          <h1><a href="blog/kalabalik-dans-pistlerinde-olmasi-ve-olmamasi-gerekenler/">Kalabalık dans pistlerinde olması ve olmaması gerekenler</a></h1>
-        </article>
-      
-        
-        <article>
-          <figure>
-            <img src="blog/harika-bir-sehirde-cosku-dolu-bir-festival/esesharikabg.jpg" alt="" width="560" height="350">
-          </figure>
-          <h1><a href="blog/harika-bir-sehirde-cosku-dolu-bir-festival/">Harika bir şehirde coşku dolu bir festival</a></h1>
-        </article>
-      
-        
-        <article>
-          <figure>
-            <img src="blog/istanbul-dans-festivali-2017/idf2017.jpg" alt="" width="560" height="350">
-          </figure>
-          <h1><a href="blog/istanbul-dans-festivali-2017/">İstanbul Dans Festivali 2017</a></h1>
-        </article>
-      
-        
-        <article>
-          <figure>
-            <img src="blog/dans-gecelerinde-aranilan-partner-olmak/aranilanpartner3.jpg" alt="" width="560" height="350">
-          </figure>
-          <h1><a href="blog/dans-gecelerinde-aranilan-partner-olmak/">Dans gecelerinde aranılan partner olmak</a></h1>
-        </article>
-      
-    </div>
-  </section>
+  <div id="preloader"></div>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nanogram.js@2.0.0/dist/nanogram.iife.min.js"></script>
+  <script>
+    const lib = new Nanogram();
+
+    function buildFeed() {
+      const preloader = document.getElementById('preloader');
+      preloader.classList.add('preloader--loading');
+      return lib.getMediaByUsername('hepdans').then((response) => {
+        const photos = response.profile.edge_owner_to_timeline_media.edges;
+        const items = [];
+
+        // Create new elements
+        // <div class="portfolio__item">
+        //   <a href="..." target="_blank" class="portfolio__link">
+        //     <img src="..." alt="..." width="..." height="..." class="portfolio__img">
+        //   </a>
+        // </div>
+
+        for (let i = 0; i < 4; i++) { // original: i <= photos.length - 1
+          const current = photos[i].node;
+
+          const div = document.createElement('div');
+          const link = document.createElement('a');
+          const img = document.createElement('img');
+
+          const thumbnail = current.thumbnail_resources[4];
+          const imgSrc = thumbnail.src;
+          const imgWidth = thumbnail.config_width;
+          const imgHeight = thumbnail.config_height;
+          const imgAlt = current.accessibility_caption;
+
+          const shortcode = current.shortcode;
+          const linkHref = 'https://www.instagram.com/p/' + shortcode;
+
+          div.classList.add('instagram-post');
+
+          // img.classList.add('portfolio__img');
+          img.src = imgSrc;
+          img.width = imgWidth;
+          img.height = imgHeight;
+          img.alt = imgAlt;
+
+          // link.classList.add('portfolio__link');
+          link.href = linkHref;
+          link.target = '_blank';
+
+          link.appendChild(img);
+          div.appendChild(link);
+
+          items.push(div);
+        }
+
+        // Create container for posts
+        const container = document.createElement('div');
+        container.id = 'instagram-posts';
+
+        // Append all photos to our container
+        for (let j = 0; j <= items.length - 1; j++) {
+          container.appendChild(items[j]);
+        }
+
+        // Append our container to main
+        document.getElementById('instagram').appendChild(container);
+
+        preloader.classList.remove('preloader--loading');
+      }).catch(function (error) {
+        console.log(error);
+        preloader.classList.remove('preloader--loading');
+      })
+    }
+
+    buildFeed()
+  </script>
 
   </main>
   <footer>

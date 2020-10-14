@@ -1018,72 +1018,37 @@ main.page {
 
 /* landing page */
 
-#featured-pages > h1 {
-  display: none;
+#instagram h1,
+#instagram h2,
+.instagram-post {
+  padding: 0 var(--space-s);
 }
 
-#featured-pages .articles,
-#blog-latest .articles {
+#instagram h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0;
+}
+
+#instagram h2 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+}
+
+#instagram-posts {
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-#featured-pages article,
-#blog-latest article,
-#blog-latest h1,
-#blog-latest h2 {
-  padding: 0 var(--space-s);
-}
-
-#featured-pages article {
-  width: 33.333%;
-}
-
-#blog-latest article {
+.instagram-post {
   width: 25%;
 }
 
-#featured-pages article h1,
-#blog-latest h1 {
-  font-size: 1.5em;
-  font-weight: normal;
-  margin: 0;
-}
-
-#featured-pages article h2,
-#blog-latest h2 {
-  font-size: 1em;
-  font-weight: normal;
-  margin: 0;
-}
-
-#featured-pages article p {
-  height: 5em;
-  overflow-y: hidden;
-}
-
-#featured-pages article figure,
-#blog-latest article figure {
+.instagram-post img {
   padding: var(--space-m) 0;
-}
-
-#featured-pages article footer {
-  text-align: right;
-}
-
-#featured-pages article footer a {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  font-size: 0.9em;
-  font-weight: bold;
-  padding: var(--space-s) var(--space-m);
-  text-transform: var(--nav-text-transform);
-}
-
-#blog-latest article h1 {
-  font-size: 1em;
 }
 
 /* instructors page */
@@ -1177,8 +1142,8 @@ main.page {
   width: calc(50% - 2 * var(--space-m));
 }
 
-.blog .post .meta small {
-  display: block;
+.post .meta small {
+  display: none;
 }
 
 .blog .post .text {
@@ -1203,7 +1168,6 @@ main.page {
     flex-basis: 100%;
   }
 
-  #featured-pages article,
   #blog-latest article,
   #blog-latest > h1,
   #blog-latest > h2 {
