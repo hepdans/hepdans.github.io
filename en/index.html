@@ -222,6 +222,18 @@
           </a>
         </div>
       
+        <div class="instagram-post">
+          <a href="." target="_blank">
+            <img src="../static/transparent.png" alt="placeholder image" width="640" height="640" style="border: 1px solid #c0c0c0; margin: 1rem 0;">
+          </a>
+        </div>
+      
+        <div class="instagram-post">
+          <a href="." target="_blank">
+            <img src="../static/transparent.png" alt="placeholder image" width="640" height="640" style="border: 1px solid #c0c0c0; margin: 1rem 0;">
+          </a>
+        </div>
+      
     </div>
   </section>
 
@@ -239,7 +251,7 @@
         const photos = response.profile.edge_owner_to_timeline_media.edges;
         const items = [];
 
-        for (let i = 0; i < 4; i++) { // original: i <= photos.length - 1
+        for (let i = 0; i < 6; i++) { // original: i <= photos.length - 1
           const current = photos[i].node;
 
           const div = document.createElement('div');
