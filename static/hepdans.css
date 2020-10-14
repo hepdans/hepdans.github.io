@@ -1024,16 +1024,19 @@ main.page {
   padding: 0 var(--space-s);
 }
 
-#instagram h1 {
-  font-size: 1.5em;
+#instagram h1,
+#instagram h2 {
   font-weight: normal;
   margin: 0;
+  text-align: center;
+}
+
+#instagram h1 {
+  font-size: 1.5em;
 }
 
 #instagram h2 {
   font-size: 1em;
-  font-weight: normal;
-  margin: 0;
 }
 
 #instagram-posts {
@@ -1168,9 +1171,7 @@ main.page {
     flex-basis: 100%;
   }
 
-  #blog-latest article,
-  #blog-latest > h1,
-  #blog-latest > h2 {
+  .instagram-post {
     flex-basis: 100%;
     margin: var(--space-m) auto;
     max-width: 60%;
