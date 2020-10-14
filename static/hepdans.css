@@ -1183,7 +1183,7 @@ main.page {
   .instagram-post {
     flex-basis: 100%;
     margin: var(--space-m) auto;
-    max-width: 60%;
+    max-width: 33.333%;
   }
 
   .instructor > * {
