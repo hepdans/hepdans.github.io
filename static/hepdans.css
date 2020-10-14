@@ -1198,3 +1198,9 @@ main.page {
     flex-basis: 100%;
   }
 }
+
+@media (max-width: 400px) {
+  nav ul li {
+    flex-basis: 100%;
+  }
+}
