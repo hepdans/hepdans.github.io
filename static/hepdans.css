@@ -4,6 +4,7 @@
   --color-primary: hsl(9.8,79.7%,59.4%);
   --color-secondary: hsl(221,25.3%,14.7%);
   --color-link: hsl(240,100%,50%);
+  --color-border: hsl(0,0%,87.8%);
 
   --font-family:
       system-ui,
@@ -1095,7 +1096,7 @@ main.page {
 }
 
 .testimonials blockquote {
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--color-border);
   margin: var(--space-m) var(--space-m);
   padding: var(--space-m) var(--space-m);
   width: calc(50% - 2 * var(--space-m));
@@ -1124,7 +1125,7 @@ main.page {
 }
 
 .testimonials blockquote footer figure {
-  border: 1px solid #c0c0c0;
+  border: 1px solid var(--color-border);
   border-radius: 50%;
   margin: 0 var(--space-m);
 }
@@ -1147,7 +1148,7 @@ main.page {
 }
 
 .blog .post {
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--color-border);
   margin: var(--space-m) var(--space-m);
   padding: 0;
   width: calc(50% - 2 * var(--space-m));
