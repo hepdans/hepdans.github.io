@@ -1130,35 +1130,38 @@ main.page {
   margin: 0 var(--space-m);
 }
 
-/* dance pages */
+/* dance and lesson pages */
 
-.dances .categories {
+.categories {
   display: flex;
   flex-wrap: wrap;
-  margin: var(--space-l) 0;
 }
 
-.dances .dance {
+.categories .dance,
+.categories .lesson {
   padding: 0 var(--space-s);
+}
+
+.categories .dance {
   width: 20%;
 }
 
-.dances .dance img {
+.categories .lesson {
+  width: 33.333%;
+}
+
+.categories img {
   border: 1px solid var(--color-border);
   border-radius: 50%;
 }
 
-.dances .dance figcaption {
+.categories figure {
   margin: var(--space-m) 0;
   text-align: center;
 }
 
-/* lesson pages */
-
-.lesson section {
-  font-size: 1.1em;
-  margin: var(--space-l) auto;
-  max-width: calc(0.7 * var(--width-content));
+.categories figcaption {
+  margin: var(--space-m) 0;
 }
 
 /* blog page */
