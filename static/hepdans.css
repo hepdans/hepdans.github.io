@@ -941,6 +941,7 @@ main {
 
 h2 {
   color: var(--color-primary);
+  font-size: 1.2em;
   font-style: italic;
   font-weight: normal;
 }
@@ -965,6 +966,10 @@ main > h1 {
   font-size: 3em;
   margin: 0;
   padding: var(--space-l) var(--space-l);
+  text-align: center;
+}
+
+section > h2 {
   text-align: center;
 }
 
@@ -1190,6 +1195,28 @@ div.social a {
 .blog-post section {
   margin: 0 auto;
   max-width: calc(0.8 * var(--width-content));
+}
+
+/* forms */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+button {
+  align-self: center;
+  width: fit-content;
+}
+
+.field {
+  margin: var(--space-m) var(--space-m);
 }
 
 /* mobile */
