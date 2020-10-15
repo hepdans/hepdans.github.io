@@ -1105,8 +1105,17 @@ div.social a {
 
 /* faqs page */
 
-.faqs dt {
+.faqs summary {
   color: var(--color-primary);
+}
+
+.faqs summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqs details > summary ,
+.faqs details > div {
+  padding: var(--space-m) var(--space-m);
 }
 
 /* dance and lesson pages */
