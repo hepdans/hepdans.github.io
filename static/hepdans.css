@@ -968,13 +968,9 @@ main > h1 {
   text-align: center;
 }
 
-main > h2 {
-  text-align: center;
-}
-
-section {
+main > section {
   margin: 0 auto;
-  max-width: var(--width-content);
+  max-width: 40em;
   padding: var(--space-l) var(--space-m);
 }
 
@@ -1011,18 +1007,11 @@ div.social a {
   margin: 0 var(--space-s);
 }
 
-/* regular page */
+/* instagram feed */
 
-main.page {
-  max-width: calc(0.5 * var(--width-content));
-}
-
-/* landing page */
-
-#instagram h1,
-#instagram h2,
-.instagram-post {
-  padding: 0 var(--space-s);
+#instagram {
+  max-width: 80%;
+  padding: var(--space-l) var(--space-l);
 }
 
 #instagram h1,
@@ -1048,6 +1037,7 @@ main.page {
 }
 
 .instagram-post {
+  padding: 0 var(--space-s);
   width: 16.667%;
 }
 
@@ -1056,24 +1046,6 @@ main.page {
 }
 
 /* instructors page */
-
-.instructor {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: var(--space-l) auto;
-  max-width: calc(0.8 * var(--width-content));
-  padding: 0 var(--space-l);
-}
-
-.instructor header {
-  width: 30%;
-}
-
-.instructor .text {
-  width: 70%;
-}
 
 .instructor h1 {
   font-size: 2em;
@@ -1093,13 +1065,14 @@ main.page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 60em;
 }
 
 .testimonials blockquote {
   border: 1px solid var(--color-border);
-  margin: var(--space-m) var(--space-m);
+  margin: var(--space-s) var(--space-s);
   padding: var(--space-m) var(--space-m);
-  width: calc(50% - 2 * var(--space-m));
+  width: calc(50% - 2 * var(--space-s));
 }
 
 .testimonials blockquote:before {
@@ -1132,13 +1105,19 @@ main.page {
 
 /* dance and lesson pages */
 
+.lessons section,
+.dances section,
+.blog section {
+  margin: 0 auto;
+  max-width: var(--width-content);
+}
+
 .categories {
   display: flex;
   flex-wrap: wrap;
 }
 
-.categories .dance,
-.categories .lesson {
+.categories div {
   padding: 0 var(--space-s);
 }
 
@@ -1150,11 +1129,6 @@ main.page {
   width: 33.333%;
 }
 
-.categories img {
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-}
-
 .categories figure {
   margin: var(--space-m) 0;
   text-align: center;
@@ -1164,13 +1138,17 @@ main.page {
   margin: var(--space-m) 0;
 }
 
+.categories img {
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+}
+
 /* blog page */
 
 .blog .posts {
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .blog .post {
@@ -1212,12 +1190,9 @@ main.page {
     max-width: 33.333%;
   }
 
-  .instructor > * {
-    flex-basis: 100%;
-  }
-
   .testimonials blockquote {
     flex-basis: 100%;
+    max-width: 80%;
   }
 
   .dances .dance {
@@ -1232,6 +1207,11 @@ main.page {
 @media (max-width: 400px) {
   nav:not(.alternatives) ul li {
     flex-basis: 100%;
+  }
+
+  .testimonials blockquote {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 
   .dances .dance {
