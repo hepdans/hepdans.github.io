@@ -1103,6 +1103,12 @@ div.social a {
   margin: 0 var(--space-m);
 }
 
+/* faqs page */
+
+.faqs dt {
+  color: var(--color-primary);
+}
+
 /* dance and lesson pages */
 
 .lessons section,
