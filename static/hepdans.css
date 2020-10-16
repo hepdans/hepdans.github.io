@@ -965,7 +965,7 @@ main > h1 {
   font-weight: normal;
   font-size: 3em;
   margin: 0;
-  padding: var(--space-l) var(--space-l);
+  padding: var(--space-m) var(--space-l);
   text-align: center;
 }
 
@@ -1194,6 +1194,10 @@ div.social a {
 form {
   display: flex;
   flex-direction: column;
+}
+
+form h2 {
+  margin: 0 auto;
 }
 
 input,
