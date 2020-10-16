@@ -969,10 +969,6 @@ main > h1 {
   text-align: center;
 }
 
-section > h2 {
-  text-align: center;
-}
-
 main > section {
   margin: 0 auto;
   max-width: 40em;
@@ -1112,10 +1108,6 @@ div.social a {
 
 .faqs summary {
   color: var(--color-primary);
-}
-
-.faqs summary::-webkit-details-marker {
-  display: none;
 }
 
 .faqs details > summary ,
