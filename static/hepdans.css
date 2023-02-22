@@ -75,6 +75,10 @@ h1 {
   margin-top: 0;
 }
 
+figure {
+  margin: var(--space-m) var(--space-s);
+}
+
 /* COLORS AND TYPOGRAPHY */
 
 body {
@@ -123,6 +127,15 @@ summary {
 h2 small {
   color: var(--color-text);
   font-style: italic;
+}
+
+figcaption {
+  margin-top: var(--space-s);
+  text-align: center;
+}
+
+figcaption a {
+  text-decoration: none;
 }
 
 small {
@@ -213,6 +226,9 @@ nav li li a:hover {
   position: relative;
   width: 100%;
   margin: 0 auto;
+}
+
+.banner {
   line-height: 0;
 }
 
@@ -323,6 +339,21 @@ blockquote > *:first-child {
   margin-top: -3em;
 }
 
+.dances {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dance {
+  width: 45%;
+}
+
+.dance img {
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
 /* FORMS */
 
 label {
@@ -384,6 +415,10 @@ button {
 
   .testimonial {
     width: 45%;
+  }
+
+  .dance {
+    width: 30%;
   }
 
   .related {
