@@ -313,7 +313,8 @@ nav li li a:hover {
   margin: var(--space-s);
 }
 
-.related p {
+.related p,
+.blog .post {
   font-size: 90%;
 }
 
@@ -321,7 +322,8 @@ nav li li a:hover {
   margin: 0;
 }
 
-.testimonials {
+.testimonials,
+.blog {
   max-width: var(--width-full);
 }
 
@@ -339,19 +341,37 @@ blockquote > *:first-child {
   margin-top: -3em;
 }
 
-.dances {
+.dances,
+.lessons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.dance {
+.dance,
+.lesson {
   width: 45%;
 }
 
-.dance img {
+.dance a,
+.lesson a {
+  color: var(--color-primary);
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.dance img,
+.lesson img {
   border: 1px solid currentColor;
   border-radius: 50%;
+}
+
+.post img {
+  width: 100%;
+}
+
+.post .meta {
+  display: none;
 }
 
 /* FORMS */
@@ -407,17 +427,20 @@ button {
     width: 45%;
   }
 
-  .testimonials {
+  .testimonials,
+  .blog {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .testimonial {
+  .testimonial,
+  .blog .post {
     width: 45%;
   }
 
-  .dance {
+  .dance,
+  .lesson {
     width: 30%;
   }
 
