@@ -7,11 +7,11 @@
 
   --font-family: system-ui, sans-serif;
 
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
   --space-m: 1rem;
-  --space-xs: calc(0.25 * var(--space-m));
-  --space-s: calc(0.5 * var(--space-m));
-  --space-l: calc(2 * var(--space-m));
-  --space-xl: calc(4 * var(--space-m));
+  --space-l: 2rem;
+  --space-xl: 4rem;
 
   --width-content: 80ch;
   --width-full: 100ch;
@@ -52,7 +52,13 @@ main {
 
 body > header,
 body > footer {
-  padding: var(--space-m) max(50vw - calc(0.5 * var(--width-full)), var(--space-m));
+  padding: var(--space-m);
+}
+
+.header,
+.footer {
+  max-width: var(--width-full);
+  margin: 0 auto;
 }
 
 h1,
@@ -160,7 +166,7 @@ nav a {
 }
 
 nav ul {
-  --item-height: calc(2em + 2 * var(--space-xs));
+  --item-height: 2.5rem;
 
   margin: 0;
   padding: 0;
@@ -404,7 +410,7 @@ button {
 
 @media (min-width: 36rem) {
   nav,
-  body > footer {
+  .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
