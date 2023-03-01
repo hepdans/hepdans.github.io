@@ -180,13 +180,9 @@ nav > a {
 nav ul {
   --item-height: 2.5rem;
 
-  max-width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
   list-style-type: none;
-  white-space: nowrap;
 }
 
 nav li {
