@@ -160,12 +160,20 @@ main img {
 
 /* NAVBARS */
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
 nav a {
   color: var(--color-text);
   text-decoration: none;
 }
 
 nav > a {
+  flex-grow: 1;
   margin-right: 2em;
 }
 
@@ -416,8 +424,7 @@ button {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 46rem) {
-  nav,
+@media (min-width: 36rem) {
   .footer {
     display: flex;
     align-items: center;
