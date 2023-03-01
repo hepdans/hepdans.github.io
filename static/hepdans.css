@@ -174,12 +174,13 @@ nav a {
 
 nav > a {
   flex-grow: 1;
-  margin-right: 2em;
+  margin-right: 1.5em;
 }
 
 nav ul {
   --item-height: 2.5rem;
 
+  display: inline-flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -191,7 +192,7 @@ nav li {
   align-items: center;
   width: max-content;
   height: var(--item-height);
-  padding: var(--space-xs) var(--space-xs);
+  padding: var(--space-xs) var(--space-s);
   font-weight: bold;
   text-transform: uppercase;
 }
