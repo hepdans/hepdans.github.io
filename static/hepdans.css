@@ -191,7 +191,7 @@ nav li {
   align-items: center;
   width: max-content;
   height: var(--item-height);
-  padding: var(--space-xs) var(--space-s);
+  padding: var(--space-xs) var(--space-xs);
   font-weight: bold;
   text-transform: uppercase;
 }
