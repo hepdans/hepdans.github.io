@@ -251,7 +251,9 @@ nav li li a:hover {
   line-height: 0;
 }
 
-.banner img {
+.banner img,
+.related img {
+  width: 100%;
   aspect-ratio: 1.75;
   object-fit: cover;
 }
@@ -327,6 +329,10 @@ nav li li a:hover {
   margin: 0;
 }
 
+.related article {
+  margin-top: var(--space-s);
+}
+
 .related h3,
 .related p {
   margin: var(--space-s);
@@ -339,6 +345,12 @@ nav li li a:hover {
 
 .instructor h2 {
   margin: 0;
+}
+
+.instructor img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
 }
 
 .testimonials,
@@ -381,12 +393,17 @@ blockquote > *:first-child {
 
 .dance img,
 .lesson img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
   border: 1px solid currentColor;
   border-radius: 50%;
 }
 
 .post img {
   width: 100%;
+  aspect-ratio: 1.6;
+  object-fit: cover;
 }
 
 .post .meta {
