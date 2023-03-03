@@ -427,6 +427,7 @@ input,
 textarea {
   width: 100%;
   padding: var(--space-s) var(--space-s);
+  font-family: inherit;
 }
 
 button {
