@@ -7,11 +7,11 @@
 
   --font-family: system-ui, sans-serif;
 
-  --space-xs: 0.25rem;
-  --space-s: 0.5rem;
-  --space-m: 1rem;
-  --space-l: 2rem;
-  --space-xl: 4rem;
+  --space-xs: 0.25em;
+  --space-s: 0.5em;
+  --space-m: 1em;
+  --space-l: 2em;
+  --space-xl: 4em;
 
   --width-content: 80ch;
   --width-full: 100ch;
@@ -69,7 +69,7 @@ h1,
 }
 
 h1 {
-  padding: var(--space-m);
+  padding: var(--space-s) var(--space-m);
 }
 
 .content,
@@ -120,7 +120,7 @@ h2 {
 h1 {
   background-color: var(--color-primary);
   color: var(--color-bg);
-  font-size: 3em;
+  font-size: clamp(2em, 5vw, 3em);
   text-align: center;
 }
 
@@ -136,7 +136,7 @@ h2 small {
 }
 
 figcaption {
-  margin-top: var(--space-s);
+  margin-top: var(--space-xs);
   text-align: center;
 }
 
@@ -265,7 +265,7 @@ nav li li a:hover {
   padding: 0 var(--space-m);
   background-color: hsla(0, 0%, 15%, 80%);
   color: hsl(0, 0%, 90%);
-  font-size: 1.25em;
+  font-size: clamp(1em, 4vw, 1.5em);
   text-align: center;
   text-transform: uppercase;
 }
@@ -336,7 +336,7 @@ nav li li a:hover {
 }
 
 .related article {
-  margin-top: var(--space-s);
+  margin-top: var(--space-l);
 }
 
 .related h3,
@@ -393,7 +393,7 @@ blockquote > *:first-child {
 .dance a,
 .lesson a {
   color: var(--color-primary);
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-transform: uppercase;
 }
 
