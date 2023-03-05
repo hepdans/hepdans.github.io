@@ -336,6 +336,10 @@ span.sign::before,
   margin: 0;
 }
 
+.faq + .faq {
+  margin-top: var(--space-m);
+}
+
 .related article {
   margin-top: var(--space-l);
 }
