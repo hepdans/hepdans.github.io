@@ -327,6 +327,7 @@ nav li li a:hover {
   text-align: right;
 }
 
+span.sign::before,
 .sign p::before {
   content: "— ";
 }
