@@ -1,9 +1,9 @@
 :root {
-  --color-bg: hsl(0, 0%, 100%);
-  --color-text: hsl(222.4, 15.3%, 21.8%);
-  --color-link: hsl(240, 100%, 50%);
+  --color-bg: hsl(0, 0%, 7%);
+  --color-text: hsl(0, 0%, 93%);
+  --color-link: hsl(200, 90%, 70%);
   --color-primary: hsl(9.8, 79.7%, 59.4%);
-  --color-secondary: hsl(221, 25.3%, 14.7%);
+  --color-secondary: hsl(221, 25.3%, 80%);
 
   --font-family: system-ui, sans-serif;
 
@@ -502,12 +502,12 @@ button {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --color-bg: hsl(0, 0%, 7%);
-    --color-text: hsl(0, 0%, 93%);
-    --color-secondary: hsl(221, 25.3%, 80%);
-    --color-link: hsl(200, 90%, 70%);
+    --color-bg: hsl(0, 0%, 100%);
+    --color-text: hsl(222.4, 15.3%, 21.8%);
+    --color-link: hsl(240, 100%, 50%);
+    --color-secondary: hsl(221, 25.3%, 14.7%);
   }
 }
 
