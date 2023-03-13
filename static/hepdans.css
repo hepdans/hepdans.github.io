@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --color-bg: hsl(0, 0%, 7%);
@@ -7,14 +7,14 @@
   --color-primary: hsl(9.8, 79.7%, 59.4%);
   --color-secondary: hsl(221, 25.3%, 80%);
 
-  --font-family: 'Josefin Sans', sans-serif;
+  --font-body: 'Josefin Sans', sans-serif;
   --font-header: 'Cormorant Garamond', serif;
 
-  --space-xs: 0.25em;
-  --space-s: 0.5em;
-  --space-m: 1em;
-  --space-l: 2em;
-  --space-xl: 4em;
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
 
   --width-content: 80ch;
   --width-full: 100ch;
@@ -53,39 +53,33 @@ main {
   flex-grow: 1;
 }
 
-body > header,
-body > footer {
-  padding: var(--space-m);
-}
-
 .header,
-.footer {
-  max-width: var(--width-full);
-  margin: 0 auto;
-}
-
+.footer,
 h1,
 .content,
 .related {
-  max-width: var(--width-content);
+  max-width: var(--width, var(--width-content));
   margin: 0 auto;
+  padding: var(--padding-v, var(--space-m)) var(--space-m);
+}
+
+.header,
+.footer,
+.testimonials,
+.blog {
+  --width: var(--width-full);
 }
 
 h1 {
-  padding: var(--space-s) var(--space-m);
-}
-
-.content,
-.related {
-  padding: var(--space-l) var(--space-m);
+  --padding-v: var(--space-s);
 }
 
 .content > *:first-child {
   margin-top: 0;
 }
 
-figure {
-  margin: var(--space-m) var(--space-s);
+.content > *:last-child {
+  margin-bottom: 0;
 }
 
 /* COLORS AND TYPOGRAPHY */
@@ -93,7 +87,8 @@ figure {
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
 h1,
@@ -102,14 +97,16 @@ h3 {
   font-family: var(--font-header);
 }
 
-main {
-  font-size: 1.25rem;
-}
-
-body > footer {
-  background-color: var(--color-secondary);
+h1 {
+  background-color: var(--color-primary);
   color: var(--color-bg);
   text-align: center;
+}
+
+h2,
+h3,
+summary {
+  color: var(--color-primary);
 }
 
 p,
@@ -125,27 +122,19 @@ a:hover {
   color: var(--color-primary);
 }
 
-h1,
-h2 {
-  font-weight: normal;
-}
-
-h1 {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  font-size: clamp(2em, 5vw, 3em);
-  text-align: center;
-}
-
-h2,
-h3,
-summary {
-  color: var(--color-primary);
-}
-
 h2 small {
   color: var(--color-text);
   font-style: italic;
+}
+
+/* IMAGES */
+
+main img {
+  content-visibility: auto;
+}
+
+figure {
+  margin: var(--space-m) var(--space-s);
 }
 
 figcaption {
@@ -157,18 +146,8 @@ figcaption a {
   text-decoration: none;
 }
 
-small {
-  font-size: 75%;
-}
-
 svg {
   fill: var(--color-text);
-}
-
-/* IMAGES */
-
-main img {
-  content-visibility: auto;
 }
 
 /* NAVBARS */
@@ -187,7 +166,6 @@ nav a {
 
 nav > a {
   flex-grow: 1;
-  margin-right: 1.5em;
 }
 
 nav ul {
@@ -250,6 +228,25 @@ nav li li:hover {
 
 nav li li a:hover {
   color: var(--color-primary);
+}
+
+/* FOOTER */
+
+body > footer {
+  background-color: var(--color-secondary);
+  color: var(--color-bg);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+}
+
+p.copyright {
+  margin: 0;
 }
 
 /* CAROUSEL */
@@ -377,11 +374,6 @@ span.sign::before,
   object-fit: cover;
 }
 
-.testimonials,
-.blog {
-  max-width: var(--width-full);
-}
-
 blockquote {
   margin: 0;
 }
@@ -465,12 +457,8 @@ button {
 
 @media (min-width: 36rem) {
   .footer {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-  }
-
-  .copyright {
     text-align: right;
   }
 
