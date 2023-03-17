@@ -7,7 +7,7 @@
   --color-primary: hsl(9.8, 79.7%, 59.4%);
   --color-secondary: hsl(221, 25.3%, 80%);
 
-  --font-main: 'Josefin Sans', sans-serif;
+  --font-body: 'Josefin Sans', sans-serif;
   --font-header: 'Cormorant Garamond', serif;
 
   --space-xs: 0.25rem;
@@ -35,14 +35,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
-
-main img {
   content-visibility: auto;
-}
-
-svg {
-  fill: var(--color-text);
 }
 
 html:focus-within {
@@ -68,7 +61,6 @@ h1,
 .related {
   max-width: var(--width, var(--width-content));
   margin: 0 auto;
-  padding: var(--space-m);
 }
 
 .main-header,
@@ -76,6 +68,17 @@ h1,
 .testimonials,
 .blog {
   --width: var(--width-full);
+}
+
+.main-header,
+.main-footer,
+h1 {
+  padding: var(--space-m);
+}
+
+.content,
+.related {
+  padding: 2em;
 }
 
 .content > *:first-child {
@@ -91,11 +94,8 @@ h1,
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: system-ui, sans-serif;
-}
-
-main {
-  font-family: var(--font-main);
+  font-family: var(--font-body), sans-serif;
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 h1,
@@ -130,6 +130,16 @@ li {
   line-height: 1.5;
 }
 
+/* HEADER */
+
+header {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+
+#logo svg path {
+  fill: var(--color-text);
+}
+
 /* NAVBARS */
 
 nav {
@@ -137,6 +147,7 @@ nav {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: flex-end;
+  gap: var(--space-s);
 }
 
 nav a {
@@ -149,7 +160,7 @@ nav > a {
 }
 
 nav ul {
-  --item-height: 2.5rem;
+  --item-height: 2.5em;
 
   display: inline-flex;
   margin: 0;
@@ -211,21 +222,18 @@ nav li li a:hover {
 }
 
 .alternatives {
-  margin-top: var(--space-s);
-  font-size: 80%;
   text-align: right;
 }
 
 .alternatives ul {
+  display: inline-flex;
   margin: 0;
+  list-style-type: none;
+  font-size: 80%;
 }
 
 .alternatives li {
-  display: inline;
-}
-
-.alternatives li + li {
-  margin-left: var(--space-s);
+  padding: var(--space-xs) var(--space-s);
 }
 
 /* FOOTER */
@@ -369,7 +377,12 @@ span.sign::before,
   margin: 0;
 }
 
-.instructor img {
+.events li {
+  list-style-type: none;
+}
+
+.instructor img,
+.event img {
   width: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
@@ -389,16 +402,19 @@ blockquote > *:first-child {
   margin-top: -3em;
 }
 
-.dances,
-.lessons {
+.landing .dances,
+.dances .content,
+.lessons .content,
+.testimonials .content,
+.blog .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.dance,
-.lesson {
-  width: 30%;
+.dances .dance,
+.lessons .lesson {
+  width: 32%;
 }
 
 .dance a,
@@ -464,30 +480,26 @@ button {
     aspect-ratio: 2.5;
   }
 
-  .instructor {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .instructor div {
-    width: 45%;
-  }
-
-  .testimonials,
-  .blog {
+  .instructor,
+  .event .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 1em;
+  }
+
+  .instructor > div,
+  .event .content > div {
+    width: 48%;
+  }
+
+  .event .details {
+    flex-basis: 100%;
   }
 
   .testimonial,
   .blog .post {
     width: 45%;
-  }
-
-  .dance,
-  .lesson {
-    width: 30%;
   }
 
   .related {
