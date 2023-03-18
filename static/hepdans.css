@@ -78,7 +78,7 @@ h1 {
 
 .content,
 .related {
-  padding: 2em;
+  padding: 2em 1em;
 }
 
 .content > *:first-child {
@@ -381,6 +381,13 @@ span.sign::before,
   list-style-type: none;
 }
 
+.instructor .photo,
+.event .photo {
+  width: min(25rem, 100%);
+  margin-right: 1em;
+  float: left;
+}
+
 .instructor img,
 .event img {
   width: 100%;
@@ -478,23 +485,6 @@ button {
 
   .banner img {
     aspect-ratio: 2.5;
-  }
-
-  .instructor,
-  .event .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1em;
-  }
-
-  .instructor > div,
-  .event .content > div {
-    width: 48%;
-  }
-
-  .event .details {
-    flex-basis: 100%;
   }
 
   .testimonial,
