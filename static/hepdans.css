@@ -381,6 +381,10 @@ span.sign::before,
   list-style-type: none;
 }
 
+.instructor {
+  clear: both;
+}
+
 .instructor .photo,
 .event .photo {
   width: min(25rem, 100%);
