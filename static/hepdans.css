@@ -355,19 +355,19 @@ span.sign::before,
 }
 
 .instructor {
+  margin-top: var(--space-l);
   clear: both;
 }
 
 .instructor .photo,
 .event .photo {
   width: min(25rem, 100%);
-  margin-right: 1em;
+  margin-right: var(--space-m);
   float: left;
 }
 
 .instructor img,
 .event img {
-  width: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
 }
@@ -409,14 +409,12 @@ blockquote > *:first-child {
   width: max(10em, 25%);
 }
 
-.dance a,
-.lesson a {
+:where(div.dance, div.lesson) a {
   color: var(--color-primary);
   text-transform: uppercase;
 }
 
-.dance img,
-.lesson img {
+:where(div.dance, div.lesson) img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
