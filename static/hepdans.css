@@ -136,8 +136,7 @@ li {
 }
 
 body > footer {
-  background-color: var(--color-secondary);
-  color: var(--color-bg);
+  background-color: hsl(0 0% 0% / 40%);
 }
 
 /* NAVBARS */
@@ -359,17 +358,31 @@ span.sign::before,
   clear: both;
 }
 
-.instructor .photo,
-.event .photo {
+:where(.instructor, .event) .photo {
   width: min(25rem, 100%);
   margin-right: var(--space-m);
   float: left;
 }
 
-.instructor img,
-.event img {
+:where(.instructor, .event) img {
   aspect-ratio: 2/3;
   object-fit: cover;
+}
+
+.image-section .photo {
+  width: min(25rem, 100%);
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.image-left {
+  margin-right: var(--space-m);
+  float: left;
+}
+
+.image-right {
+  margin-left: var(--space-m);
+  float: right;
 }
 
 .faq + .faq {
@@ -409,12 +422,12 @@ blockquote > *:first-child {
   width: max(10em, 25%);
 }
 
-:where(div.dance, div.lesson) a {
+:where(article.dance, article.lesson) a {
   color: var(--color-primary);
   text-transform: uppercase;
 }
 
-:where(div.dance, div.lesson) img {
+:where(article.dance, article.lesson) img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
