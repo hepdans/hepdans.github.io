@@ -379,10 +379,12 @@ span.sign::before,
 
 .image-left {
   float: left;
+  margin-right: var(--space-l);
 }
 
 .image-right {
   float: right;
+  margin-left: var(--space-l);
 }
 
 .faq + .faq,
