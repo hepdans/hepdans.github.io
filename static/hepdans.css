@@ -388,6 +388,7 @@ span.sign::before,
 }
 
 .faq + .faq,
+.subcontent + .subcontent,
 .event-listing + .event-listing {
   margin-top: var(--space-m);
 }
