@@ -357,9 +357,10 @@ span.sign::before,
   clear: both;
 }
 
-:where(.instructor, .event) .photo {
+.instructor .photo,
+.event .poster {
   width: min(25rem, 100%);
-  margin-right: var(--space-m);
+  margin-right: var(--space-l);
   float: left;
 }
 
@@ -368,23 +369,24 @@ span.sign::before,
   object-fit: cover;
 }
 
+.subcontent {
+  clear: both;
+}
+
 .subcontent .image {
   width: min(25rem, 100%);
-  aspect-ratio: 3/2;
-  object-fit: cover;
 }
 
 .image-left {
-  margin-right: var(--space-m);
   float: left;
 }
 
 .image-right {
-  margin-left: var(--space-m);
   float: right;
 }
 
-.faq + .faq {
+.faq + .faq,
+.event-listing + .event-listing {
   margin-top: var(--space-m);
 }
 
@@ -451,10 +453,15 @@ section.dances,
   align-items: center;
 }
 
-.event-listing .poster {
-  width: 160px;
+.event-listing .poster img {
+  width: 100%;
+  height: auto;
   aspect-ratio: 2/3;
   object-fit: cover;
+}
+
+.event-listing .info {
+  width: 100%;
 }
 
 /* FORMS */
