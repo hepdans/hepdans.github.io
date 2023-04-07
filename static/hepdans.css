@@ -157,15 +157,15 @@ nav a {
   text-decoration: none;
 }
 
-#top-nav {
+#main-nav {
   display: flex;
 }
 
-#top-nav :where(li:hover, li.active) a {
+#main-nav :where(li:hover, li.active) a {
   color: var(--color-bg);
 }
 
-#top-nav ul.level1 {
+#main-nav > ul {
   --item-height: 2.5rem;
 
   display: inline-flex;
@@ -174,7 +174,7 @@ nav a {
   column-gap: var(--space-xs);
 }
 
-#top-nav ul.level1 > li {
+#main-nav > ul > li {
   display: inline-flex;
   position: relative;
   align-items: center;
@@ -183,20 +183,20 @@ nav a {
   border-radius: var(--space-xs);
 }
 
-#top-nav ul.level1 > li:hover {
+#main-nav > ul > li:hover {
   background-color: var(--color-primary-hover);
 }
 
-#top-nav ul.level1 > li.active {
+#main-nav > ul > li.active {
   background-color: var(--color-primary);
 }
 
-#top-nav ul.level1 > li > a {
+#main-nav > ul > li > a {
   font-weight: bold;
   text-transform: uppercase;
 }
 
-#top-nav ul.level2 {
+#main-nav li ul {
   display: none;
   position: absolute;
   z-index: 2;
@@ -207,28 +207,27 @@ nav a {
   white-space: nowrap;
 }
 
-#top-nav li:hover ul.level2 {
+#main-nav li:hover ul {
   display: unset;
 }
 
-#top-nav ul.level2 li {
+#main-nav li ul li {
   font-size: 95%;
 }
 
-#top-nav ul.level2 a:hover {
+#main-nav li ul a:hover {
   color: var(--color-primary);
 }
 
-ul.alternatives {
-  display: inline-flex;
+#alternatives-nav {
   flex-basis: 100%;
-  justify-content: end;
-  margin: 0;
-  padding: 0;
-  column-gap: 1em;
-  font-size: 80%;
-  list-style: none;
   text-align: right;
+}
+
+#alternatives-nav ul {
+  display: inline-flex;
+  column-gap: var(--space-xs);
+  font-size: 80%;
 }
 
 /* CAROUSEL */
@@ -369,7 +368,7 @@ span.sign::before,
   object-fit: cover;
 }
 
-.image-section .photo {
+.subcontent .image {
   width: min(25rem, 100%);
   aspect-ratio: 3/2;
   object-fit: cover;
@@ -407,7 +406,7 @@ blockquote > *:first-child {
   margin-top: -3em;
 }
 
-.landing .dances,
+section.dances,
 .dances .content,
 .lessons .content,
 .testimonials .content,
@@ -443,6 +442,19 @@ blockquote > *:first-child {
 
 .post .meta {
   display: none;
+}
+
+.event-listing {
+  display: flex;
+  width: 100%;
+  gap: var(--space-l);
+  align-items: center;
+}
+
+.event-listing .poster {
+  width: 160px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
 }
 
 /* FORMS */
