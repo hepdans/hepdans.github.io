@@ -358,6 +358,7 @@ span.sign::before,
 }
 
 .instructor .photo,
+.event-listing .poster,
 .event .poster {
   width: min(25rem, 100%);
   margin-right: var(--space-l);
@@ -375,6 +376,13 @@ span.sign::before,
 
 .subcontent .image {
   width: min(25rem, 100%);
+  height: auto;
+}
+
+.poster,
+.image-left,
+.image-right {
+  margin-bottom: var(--space-m);
 }
 
 .image-left {
