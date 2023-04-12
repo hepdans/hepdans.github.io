@@ -132,8 +132,7 @@ li {
 }
 
 body > footer {
-  background-color: var(--color-secondary);
-  color: var(--color-bg);
+  background-color: hsl(0 0% 0% / 40%);
 }
 
 /* NAVBARS */
