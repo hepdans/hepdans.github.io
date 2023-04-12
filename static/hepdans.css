@@ -76,11 +76,7 @@ h1,
 
 body {
   quotes: "\201c" "\201d";
-  background-image: linear-gradient(
-    to left top,
-    hsl(349 89.5% 33.7%),
-    hsl(244 57.6% 39.8%)
-  );
+  background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body), sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
@@ -136,7 +132,8 @@ li {
 }
 
 body > footer {
-  background-color: hsl(0 0% 0% / 40%);
+  background-color: var(--color-secondary);
+  color: var(--color-bg);
 }
 
 /* NAVBARS */
