@@ -39,6 +39,10 @@ img {
   content-visibility: auto;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -366,11 +370,11 @@ span.sign::before,
   object-fit: cover;
 }
 
-.subcontent {
+.subsection {
   clear: both;
 }
 
-.subcontent .image {
+.subsection .image {
   width: min(25rem, 100%);
   height: auto;
 }
@@ -392,7 +396,7 @@ span.sign::before,
 }
 
 .faq + .faq,
-.subcontent + .subcontent,
+.subsection + .subsection,
 .event-listing + .event-listing {
   margin-top: var(--space-m);
 }
@@ -456,7 +460,6 @@ section.dances,
 .event-listing {
   display: flex;
   width: 100%;
-  gap: var(--space-l);
   align-items: center;
 }
 
@@ -469,6 +472,10 @@ section.dances,
 
 .event-listing .info {
   width: 100%;
+}
+
+td {
+  padding: var(--space-s);
 }
 
 /* FORMS */
