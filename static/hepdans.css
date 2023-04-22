@@ -238,23 +238,26 @@ nav a {
   margin: 0 auto;
 }
 
-.banner {
+.banner,
+.slide {
   line-height: 0;
 }
 
 .banner img,
+.slide img,
 .related img {
   width: 100%;
   aspect-ratio: 1.75;
   object-fit: cover;
 }
 
-.banner .title {
+.slide .text {
   position: absolute;
   bottom: 0;
   width: 100%;
   max-height: 40%;
-  padding: 0 var(--space-m);
+  margin: 0;
+  padding: var(--space-l) var(--space-m);
   background-color: hsla(0, 0%, 15%, 80%);
   color: hsl(0, 0%, 90%);
   font-size: min(4vw, 1.5em);
@@ -262,7 +265,7 @@ nav a {
   text-transform: uppercase;
 }
 
-.banner a {
+.slide a {
   color: var(--color-primary);
   text-decoration: none;
 }
@@ -370,11 +373,11 @@ span.sign::before,
   object-fit: cover;
 }
 
-.subsection {
+ .content-block + .content-block {
   clear: both;
 }
 
-.subsection .image {
+.content-block .image {
   width: min(25rem, 100%);
   height: auto;
 }
@@ -396,7 +399,7 @@ span.sign::before,
 }
 
 .faq + .faq,
-.subsection + .subsection,
+.content-block + .content-block,
 .event-listing + .event-listing {
   margin-top: var(--space-m);
 }
@@ -419,7 +422,7 @@ blockquote > *:first-child {
   margin-top: -3em;
 }
 
-section.dances,
+.landing .dances,
 .dances .content,
 .lessons .content,
 .testimonials .content,
@@ -512,7 +515,8 @@ button {
     width: 48%;
   }
 
-  .banner img {
+  .banner img,
+  .slide img {
     aspect-ratio: 2.5;
   }
 

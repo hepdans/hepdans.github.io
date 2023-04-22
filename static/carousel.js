@@ -1,15 +1,15 @@
-let bannerIndex = 0;
+let slideIndex = 0;
 
 function showCarousel() {
-    const banners = document.getElementsByClassName("banner");
-    for (let i = 0; i < banners.length; i++) {
-        banners[i].style.display = "none";
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-    bannerIndex++;
-    if (bannerIndex > banners.length) {
-        bannerIndex = 1;
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
     }
-    banners[bannerIndex-1].style.display = "block";
+    slides[slideIndex-1].style.display = "block";
     setTimeout(showCarousel, 5000);
 }
 
