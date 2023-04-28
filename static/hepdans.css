@@ -242,9 +242,6 @@ nav a {
 .slide {
   background-color: var(--color-primary);
   line-height: 0;
-}
-
-:not(.landing) :where(.banner, .slide) {
   clip-path: polygon(0 5%, 0 100%, 100% 100%, 100% 0);
 }
 
@@ -252,10 +249,11 @@ nav a {
   width: 100%;
   aspect-ratio: 1.75;
   object-fit: cover;
+  clip-path: polygon(0 5%, 0 100%, 100% 95%, 100% 0);
 }
 
-:not(.landing) :where(.banner, .slide) img {
-  clip-path: polygon(0 5%, 0 100%, 100% 95%, 100% 0);
+.carousel :where(.banner, .slide) img {
+  clip-path: none;
 }
 
 .slide .text {
