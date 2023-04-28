@@ -368,12 +368,7 @@ span.sign::before,
   float: left;
 }
 
-:where(.instructor, .event) img {
-  aspect-ratio: 2/3;
-  object-fit: cover;
-}
-
- .content-block + .content-block {
+.content-block + .content-block {
   clear: both;
 }
 
@@ -462,15 +457,13 @@ blockquote > *:first-child {
 
 .event-listing {
   display: flex;
-  width: 100%;
   align-items: center;
+  width: 100%;
 }
 
 .event-listing .poster img {
   width: 100%;
   height: auto;
-  aspect-ratio: 2/3;
-  object-fit: cover;
 }
 
 .event-listing .info {
