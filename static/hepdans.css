@@ -240,7 +240,9 @@ nav a {
 
 .banner,
 .slide {
+  background-color: var(--color-primary);
   line-height: 0;
+  clip-path: polygon(0 5%, 0 100%, 100% 100%, 100% 0);
 }
 
 .banner img,
@@ -249,6 +251,7 @@ nav a {
   width: 100%;
   aspect-ratio: 1.75;
   object-fit: cover;
+  clip-path: polygon(0 5%, 0 100%, 100% 95%, 100% 0);
 }
 
 .slide .text {
@@ -384,13 +387,13 @@ span.sign::before,
 }
 
 .image-left {
-  float: left;
   margin-right: var(--space-l);
+  float: left;
 }
 
 .image-right {
-  float: right;
   margin-left: var(--space-l);
+  float: right;
 }
 
 .faq + .faq,
