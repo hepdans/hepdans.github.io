@@ -31,7 +31,6 @@
 
 body {
   margin: 0;
-  text-underline-offset: var(--space-xs);
 }
 
 img {
@@ -45,11 +44,6 @@ table {
 
 th {
   text-align: left;
-}
-
-th,
-td {
-  padding: var(--space-s);
 }
 
 html:focus-within {
@@ -93,6 +87,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-body), sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
+  text-underline-offset: var(--space-xs);
 }
 
 h1,
@@ -130,6 +125,11 @@ a:hover {
 p,
 li {
   line-height: 1.5;
+}
+
+th,
+td {
+  padding: var(--space-s);
 }
 
 /* HEADER AND FOOTER */
@@ -248,9 +248,7 @@ nav a {
 }
 
 .slide {
-  background-color: var(--color-primary);
   line-height: 0;
-  clip-path: polygon(0 5%, 0 100%, 100% 100%, 100% 0);
 }
 
 :where(.slide, .related) img {
@@ -285,21 +283,6 @@ nav a {
   text-decoration: none;
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 /* IMAGES */
 
 .content img {
@@ -323,6 +306,11 @@ figcaption a {
 
 #logo svg path {
   fill: var(--color-text);
+}
+
+.heading {
+  background-color: var(--color-primary);
+  clip-path: polygon(0 5%, 0 100%, 100% 100%, 100% 0);
 }
 
 .social a {
