@@ -31,16 +31,25 @@
 
 body {
   margin: 0;
+  text-underline-offset: var(--space-xs);
 }
 
 img {
   max-width: 100%;
   height: auto;
-  content-visibility: auto;
 }
 
 table {
   border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+th,
+td {
+  padding: var(--space-s);
 }
 
 html:focus-within {
@@ -238,31 +247,32 @@ nav a {
   margin: 0 auto;
 }
 
-.banner,
 .slide {
   background-color: var(--color-primary);
   line-height: 0;
   clip-path: polygon(0 5%, 0 100%, 100% 100%, 100% 0);
 }
 
-:where(.banner, .slide, .related) img {
+:where(.slide, .related) img {
   width: 100%;
   aspect-ratio: 1.75;
   object-fit: cover;
   clip-path: polygon(0 5%, 0 100%, 100% 95%, 100% 0);
 }
 
-.carousel :where(.banner, .slide) img {
+.landing .carousel .slide img {
   clip-path: none;
 }
 
 .slide .text {
+  display: grid;
+  place-content: center;
   position: absolute;
   bottom: 0;
   width: 100%;
-  max-height: 40%;
+  max-height: min(40%, 4em);
   margin: 0;
-  padding: var(--space-l) var(--space-m);
+  padding: min(var(--space-l), 1em) var(--space-m);
   background-color: hsla(0, 0%, 15%, 80%);
   color: hsl(0, 0%, 90%);
   font-size: min(4vw, 1.5em);
@@ -291,6 +301,10 @@ nav a {
 }
 
 /* IMAGES */
+
+.content img {
+  content-visibility: auto;
+}
 
 figure {
   margin: var(--space-m) var(--space-s);
@@ -475,10 +489,6 @@ blockquote > *:first-child {
   width: 100%;
 }
 
-td {
-  padding: var(--space-s);
-}
-
 /* FORMS */
 
 label {
@@ -513,7 +523,6 @@ button {
     width: 48%;
   }
 
-  .banner img,
   .slide img {
     aspect-ratio: 2.5;
   }
