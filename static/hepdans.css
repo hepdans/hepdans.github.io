@@ -255,10 +255,10 @@ nav a {
   width: 100%;
   aspect-ratio: 1.75;
   object-fit: cover;
-  clip-path: polygon(0 5%, 0 100%, 100% 95%, 100% 0);
+  clip-path: polygon(0 1rem, 0 100%, 100% 95%, 100% 0);
 }
 
-.landing .carousel .slide img {
+.landing .slide img {
   clip-path: none;
 }
 
@@ -310,7 +310,7 @@ figcaption a {
 
 .heading {
   background-color: var(--color-primary);
-  clip-path: polygon(0 5%, 0 100%, 100% 100%, 100% 0);
+  clip-path: polygon(0 1rem, 0 100%, 100% 100%, 100% 0);
 }
 
 .social a {
