@@ -255,6 +255,9 @@ nav a {
   width: 100%;
   aspect-ratio: 1.75;
   object-fit: cover;
+}
+
+.slide img {
   clip-path: polygon(0 max(5%, 1rem), 0 100%, 100% 95%, 100% 0);
 }
 
@@ -475,6 +478,13 @@ blockquote > *:first-child {
 
 .event-listing .info {
   width: 100%;
+}
+
+.pagination {
+  margin-top: var(--space-m);
+  font-size: 90%;
+  text-align: center;
+  text-transform: lowercase;
 }
 
 /* FORMS */
