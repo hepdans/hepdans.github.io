@@ -25,7 +25,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  overflow-x: hidden;
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: 'Josefin Sans', sans-serif;
@@ -99,7 +98,7 @@ img {
 }
 
 figure {
-  margin: 1em;
+  margin: 1em 0;
 }
 
 figcaption {
@@ -149,10 +148,10 @@ td {
 #top-header,
 #main-footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
   justify-content: space-around;
-  gap: var(--space-m);
+  gap: var(--space-m) var(--space-l);
 }
 
 body > footer {
@@ -251,6 +250,10 @@ nav a {
 }
 
 /* SLIDES */
+
+.heading {
+  overflow-x: hidden;
+}
 
 .slides {
   display: flex;
@@ -365,25 +368,24 @@ nav a {
 
 .related,
 .testimonials .content,
+.events .content,
 .blog .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: var(--space-l) var(--space-m);
-}
-
-.related {
-  width: 80%;
+  justify-content: space-between;
+  gap: var(--space-l);
 }
 
 .related p,
 .blog .post {
+  width: 100%;
   font-size: 90%;
 }
 
-.related img {
+.related img,
+.blog .post img {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 2.4;
   object-fit: cover;
 }
 
@@ -439,7 +441,6 @@ span.sign::before,
   margin: 0;
 }
 
-.event-listing .poster,
 .event .poster {
   width: min(25rem, 100%);
   margin-right: var(--space-l);
@@ -450,12 +451,6 @@ span.sign::before,
 .image-left,
 .image-right {
   margin-bottom: var(--space-m);
-}
-
-.faq + .faq,
-.content-block + .content-block,
-.event-listing + .event-listing {
-  margin-top: var(--space-m);
 }
 
 .events li {
@@ -499,13 +494,19 @@ span.sign::before,
 
 .event-listing {
   display: flex;
-  align-items: center;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: var(--space-l);
 }
 
-.event-listing .poster img {
+.event-card {
+  width: 12rem;
+}
+
+.event-card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 0.77778;
+  object-fit: cover;
+  border-radius: 2em;
 }
 
 .event-listing .info {
@@ -550,27 +551,16 @@ button {
 }
 
 @media (min-width: 45rem) {
-  #top-header,
-  #main-footer {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .slide img {
     aspect-ratio: 2.4;
-  }
-
-  .testimonials .content,
-  .blog .content {
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   .related article,
   .testimonial,
   .blog .post {
-    width: 48%;
+    width: 47%;
   }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
