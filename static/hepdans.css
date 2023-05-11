@@ -5,14 +5,14 @@
   --color-text: hsl(0 0% 93%);
   --color-link: hsl(200 90% 70%);
   --color-primary: hsl(10 79.7% 59.4%);
-  --color-primary-hover: hsl(10 79.7% 59.4% / 70%);
 
   --space-xs: 0.25rem;
   --space-s: 0.5rem;
   --space-m: 1rem;
   --space-l: 2rem;
-  --space-xl: 4rem;
 }
+
+/* RESET */
 
 *,
 ::before,
@@ -21,10 +21,38 @@
 }
 
 body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 1em 0;
+}
+
+figcaption {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* GENERAL */
+
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: 'Josefin Sans', sans-serif;
@@ -40,24 +68,21 @@ body > footer {
   background-image: linear-gradient(to bottom, hsl(221 25.3% 20.7%), hsl(221 25.3% 27.7%));
 }
 
+.content {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: var(--space-m);
+}
+
 #main-header,
 #main-footer {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
   gap: var(--space-s) var(--space-l);
   max-width: 90ch;
-  margin: 0 auto;
-  padding: var(--space-m);
   font-size: 85%;
-}
-
-.content,
-.related {
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: var(--space-l) var(--space-m);
 }
 
 p,
@@ -68,14 +93,6 @@ summary {
 
 a {
   color: var(--color-link);
-}
-
-a:hover {
-  color: var(--color-primary);
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
 }
 
 h1,
@@ -96,141 +113,102 @@ summary {
   color: var(--color-primary);
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.content img {
-  content-visibility: auto;
-}
-
-figure {
-  margin: 1em 0;
-}
-
-figcaption {
-  margin-top: var(--space-s);
-  text-align: center;
-}
-
-blockquote:before {
-  content: "\201c";
-  color: var(--color-primary);
-  font-size: 5em;
-}
-
-blockquote > *:first-child {
-  margin-top: -3em;
-}
-
-table {
-  border-collapse: collapse;
-}
-
 tr {
   border-bottom: 1px solid currentColor;
 }
 
-th {
-  text-align: left;
-}
-
-th,
 td {
   padding: var(--space-m);
 }
 
+#logo path {
+  fill: var(--color-text);
+}
+
+.social {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.copyright {
+  margin: 0;
+  text-align: center;
+}
+
 /* NAVBARS */
 
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
 nav ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav li {
+nav li > :is(a, span) {
   padding: var(--space-s);
-  line-height: 1;
 }
 
-nav a {
-  color: var(--color-text);
-  text-decoration: none;
+ul.level1 > li {
+  --item-height: 2.5rem;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  height: var(--item-height);
+  border-radius: var(--space-s) var(--space-xs);
 }
 
-#main-nav {
-  display: flex;
+ul.level1 > :is(li:hover, li:focus-within) {
+  background-color: hsl(10 79.7% 59.4% / 70%);
 }
 
-#main-nav .menuitem {
+ul.level1 > li.active {
+  background-color: var(--color-primary);
+}
+
+ul.level1 > li > :is(a, span) {
   font-weight: bold;
   text-transform: uppercase;
 }
 
-#main-nav :where(li:hover, li.active, li:focus-within) a {
-  color: var(--color-bg);
-}
-
-#main-nav > ul {
-  --item-height: 2.5rem;
-
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: var(--space-xs);
-}
-
-#main-nav > ul > li {
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  width: max-content;
-  height: var(--item-height);
-  border-radius: var(--space-xs);
-}
-
-#main-nav > ul > :where(li:hover, li:focus-within) {
-  background-color: var(--color-primary-hover);
-}
-
-#main-nav > ul > li.active {
-  background-color: var(--color-primary);
-}
-
-#main-nav li ul {
+ul.level2 {
   display: none;
   position: absolute;
   z-index: 2;
   top: var(--item-height);
   left: 0;
   background-color: var(--color-text);
-  color: var(--color-primary);
   white-space: nowrap;
 }
 
-#main-nav :is(li:hover, li:focus-within) ul {
+ul.level1 > :is(li:hover, li:focus-within) > ul {
   display: unset;
 }
 
-#main-nav li ul li {
-  font-size: 95%;
+ul.level2 > li:hover {
+  background-color: var(--color-link);
 }
 
-#main-nav li ul a:hover {
-  color: var(--color-primary);
+ul.level2 a {
+  display: block;
+  color: var(--color-bg);
 }
 
 #alternatives-nav {
   flex-basis: 100%;
-  text-align: right;
+  font-size: 85%;
 }
 
-#alternatives-nav ul {
-  display: inline-flex;
-  column-gap: var(--space-xs);
-  font-size: 80%;
+#alternatives-nav > ul {
+  justify-content: flex-end;
+  width: 100%;
 }
 
 /* HEADING */
@@ -256,34 +234,6 @@ nav a {
 .slide {
   position: relative;
   flex: 0 0 100%;
-}
-
-.slide :where(.prev, .next) {
-  --size: max(6vw, 3rem);
-
-  position: absolute;
-  z-index: 1;
-  top: calc(50% - 0.5 * var(--size));
-  width: var(--size);
-  height: var(--size);
-  margin: var(--space-m);
-  border-radius: 50%;
-  background-color: #333;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: calc(0.6 * var(--size)) calc(0.6 * var(--size));
-  color: white;
-  font-size: 0;
-}
-
-.slide .prev {
-  left: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-}
-
-.slide .next {
-  right: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
 
 .slide img {
@@ -314,27 +264,45 @@ nav a {
   pointer-events: none;
 }
 
+.slide :where(.prev, .next) {
+  --size: max(6vw, 3rem);
+
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 0.5 * var(--size));
+  width: var(--size);
+  height: var(--size);
+  margin: var(--space-m);
+  border-radius: 50%;
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: calc(0.6 * var(--size)) calc(0.6 * var(--size));
+  color: white;
+  font-size: 0;
+}
+
+.slide .prev {
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.slide .next {
+  right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
 /* COMMON RULES */
 
-#logo svg path {
-  fill: var(--color-text);
+.content img {
+  content-visibility: auto;
 }
 
-.social a {
-  margin: var(--space-s) var(--space-xs);
-  text-decoration: none;
-}
-
-.copyright {
-  margin: 0;
-  text-align: center;
-}
-
-.content-block + .content-block {
+.section {
   clear: both;
 }
 
-.content-block .image {
+.section .image {
   width: min(25rem, 100%);
 }
 
@@ -349,13 +317,11 @@ nav a {
 }
 
 .related,
-.testimonials .content,
-.events div.content,
-.blog .content {
+:where(.testimonials, .events, .blog) div.content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--space-l);
+  gap: var(--space-m);
 }
 
 .related p,
@@ -403,7 +369,7 @@ span.sign::before,
   margin: 0;
 }
 
-/* PAGES */
+/* CONTENT TYPES */
 
 .instructor {
   margin-top: var(--space-l);
@@ -417,6 +383,16 @@ span.sign::before,
 
 .instructor h2 {
   margin: var(--space-s) 0;
+}
+
+blockquote:before {
+  content: "\201c";
+  color: var(--color-primary);
+  font-size: 5em;
+}
+
+blockquote > *:first-child {
+  margin-top: -3em;
 }
 
 .testimonial {
@@ -453,7 +429,6 @@ span.sign::before,
 }
 
 :where(article.dance, article.lesson) a {
-  color: var(--color-primary);
   text-transform: uppercase;
 }
 
@@ -495,10 +470,6 @@ span.sign::before,
   border-radius: 2em;
 }
 
-.event-listing .info {
-  width: 100%;
-}
-
 /* FORMS */
 
 label {
@@ -537,6 +508,11 @@ button {
 }
 
 @media (min-width: 45rem) {
+  #main-header,
+  #main-footer {
+    justify-content: space-between;
+  }
+
   .slide img {
     aspect-ratio: 2.4;
   }
@@ -544,7 +520,7 @@ button {
   .related article,
   .testimonial,
   .blog .post {
-    width: 47%;
+    width: calc(50% - var(--space-s));
   }
 
 }
