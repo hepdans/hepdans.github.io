@@ -350,7 +350,7 @@ nav a {
 
 .related,
 .testimonials .content,
-.events .content,
+.events div.content,
 .blog .content {
   display: flex;
   flex-wrap: wrap;
