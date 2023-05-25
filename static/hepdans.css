@@ -56,7 +56,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: "Josefin Sans", sans-serif;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   text-underline-offset: var(--space-xs);
 }
 
