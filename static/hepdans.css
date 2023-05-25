@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --color-bg: hsl(221 25.3% 14.7%);
@@ -55,8 +55,8 @@ body {
   min-height: 100vh;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   text-underline-offset: var(--space-xs);
 }
 
@@ -98,7 +98,7 @@ a {
 h1,
 h2,
 h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 h1 {
@@ -162,7 +162,7 @@ ul.level1 > li {
   position: relative;
   align-items: center;
   height: var(--item-height);
-  border-radius: var(--space-s) var(--space-xs);
+  border-radius: var(--space-s);
 }
 
 ul.level1 > :is(li:hover, li:focus-within) {
@@ -298,20 +298,17 @@ ul.level2 a {
   content-visibility: auto;
 }
 
-.section {
-  clear: both;
+.image-left img,
+.image-right img {
+  margin-bottom: var(--space-m);
 }
 
-.section .image {
-  width: min(25rem, 100%);
-}
-
-.image-left {
+.image-left img {
   margin-right: var(--space-l);
   float: left;
 }
 
-.image-right {
+.image-right img {
   margin-left: var(--space-l);
   float: right;
 }
@@ -371,18 +368,9 @@ span.sign::before,
 
 /* CONTENT TYPES */
 
-.instructor {
-  margin-top: var(--space-l);
-  clear: both;
-}
-
 .instructor img {
   aspect-ratio: 0.8;
   object-fit: cover;
-}
-
-.instructor h2 {
-  margin: var(--space-s) 0;
 }
 
 blockquote:before {
@@ -397,18 +385,6 @@ blockquote > *:first-child {
 
 .testimonial {
   margin: 0;
-}
-
-.event .poster {
-  width: min(25rem, 100%);
-  margin-right: var(--space-l);
-  float: left;
-}
-
-.poster,
-.image-left,
-.image-right {
-  margin-bottom: var(--space-m);
 }
 
 .events li {
@@ -467,7 +443,7 @@ blockquote > *:first-child {
   width: 100%;
   aspect-ratio: 0.77778;
   object-fit: cover;
-  border-radius: 2em;
+  border-radius: 1em;
 }
 
 /* FORMS */
@@ -500,7 +476,19 @@ button {
 /* MEDIA QUERIES */
 
 @media (min-width: 25rem) {
-  .instructor img {
+  .section,
+  .instructor,
+  .intro {
+    display: flow-root;
+  }
+
+  .section img {
+    width: 60%;
+    margin-bottom: var(--space-m);
+  }
+
+  .instructor img,
+  .intro img {
     width: 50%;
     margin-right: var(--space-l);
     float: left;
@@ -522,7 +510,6 @@ button {
   .blog .post {
     width: calc(50% - var(--space-s));
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
