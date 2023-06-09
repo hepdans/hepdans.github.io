@@ -35,7 +35,7 @@ figure {
 }
 
 figcaption {
-  margin-top: 0.5em;
+  margin-top: 1em;
   text-align: center;
 }
 
@@ -57,7 +57,7 @@ body {
   color: var(--color-text);
   font-family: "Josefin Sans", sans-serif;
   font-size: clamp(1rem, 2vw, 1.25rem);
-  text-underline-offset: var(--space-xs);
+  text-underline-offset: 3px;
 }
 
 main {
@@ -87,7 +87,8 @@ body > footer {
 
 p,
 li,
-summary {
+summary,
+figcaption {
   line-height: 1.5;
 }
 
@@ -335,6 +336,7 @@ ul.level2 a {
 }
 
 .pagination {
+  flex-basis: 100%;
   margin-top: var(--space-m);
   font-size: 90%;
   text-align: center;
