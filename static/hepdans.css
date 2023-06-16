@@ -244,6 +244,14 @@ ul.level2 a {
   clip-path: polygon(0 max(5%, 1rem), 0 100%, 100% 95%, 100% 0);
 }
 
+.slide img.align-top {
+  object-position: top;
+}
+
+.slide img .align-bottom {
+  object-position: bottom;
+}
+
 .landing .slide img {
   clip-path: none;
 }
