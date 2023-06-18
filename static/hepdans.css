@@ -1,46 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
-  --color-bg: hsl(221 25.3% 14.7%);
-  --color-text: hsl(0 0% 93%);
-  --color-link: hsl(200 90% 70%);
-  --color-primary: hsl(10 79.7% 59.4%);
+  --color-bg: hsl(221, 25.3%, 14.7%);
+  --color-text: hsl(0, 0%, 93%);
+  --color-link: hsl(200, 90%, 70%);
+  --color-primary: hsl(10, 79.7%, 59.4%);
+
+  --font-body: "Josefin Sans";
+  --font-header: "Cormorant Garamond";
 
   --space-xs: 0.25rem;
   --space-s: 0.5rem;
   --space-m: 1rem;
   --space-l: 2rem;
+  --space-xl: 4rem;
 }
 
 /* RESET */
 
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  line-height: 1.5;
 }
 
-img {
+body * {
+  line-height: calc(1em + 0.5rem);
+}
+
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-figure {
+figure,
+table {
   margin: 1em 0;
 }
 
 figcaption {
-  margin-top: 1em;
+  margin-top: 0.5em;
   text-align: center;
+}
+
+table caption {
+  margin-bottom: 0.5em;
 }
 
 table {
   border-collapse: collapse;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 html:focus-within {
@@ -55,9 +77,8 @@ body {
   min-height: 100vh;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: "Josefin Sans", sans-serif;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  text-underline-offset: 3px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 1.125rem;
 }
 
 main {
@@ -65,7 +86,13 @@ main {
 }
 
 body > footer {
-  background-image: linear-gradient(to bottom, hsl(221 25.3% 20.7%), hsl(221 25.3% 27.7%));
+  background-image:
+    linear-gradient(
+      to right,
+      hsl(221, 25.3%, 20.7%),
+      hsl(221, 25.3%, 27.7%),
+      hsl(221, 25.3%, 20.7%)
+    );
 }
 
 .content {
@@ -80,26 +107,19 @@ body > footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  gap: var(--space-s) var(--space-l);
+  gap: var(--space-s) var(--space-xl);
   max-width: 90ch;
   font-size: 85%;
 }
 
-p,
-li,
-summary,
-figcaption {
-  line-height: 1.5;
-}
-
 a {
   color: var(--color-link);
+  text-underline-offset: var(--space-xs);
 }
 
 h1,
-h2,
-h3 {
-  font-family: "Cormorant Garamond", serif;
+h2 {
+  font-family: var(--font-header), serif;
 }
 
 h1 {
@@ -109,31 +129,31 @@ h1 {
 }
 
 h2,
-h3,
 summary {
   color: var(--color-primary);
 }
 
+blockquote:before {
+  content: "\201c";
+  color: var(--color-primary);
+  font-size: 5em;
+}
+
+blockquote > *:first-child {
+  margin-top: -3em;
+}
+
+table {
+  width: 100%;
+}
+
 tr {
-  border-bottom: 1px solid currentColor;
+  border: 1px solid;
 }
 
-td {
-  padding: var(--space-m);
-}
-
-#logo path {
-  fill: var(--color-text);
-}
-
-.social {
-  display: flex;
-  gap: var(--space-m);
-}
-
-.copyright {
-  margin: 0;
-  text-align: center;
+td,
+th {
+  padding: var(--space-s);
 }
 
 /* NAVBARS */
@@ -163,11 +183,10 @@ ul.level1 > li {
   position: relative;
   align-items: center;
   height: var(--item-height);
-  border-radius: var(--space-s);
 }
 
 ul.level1 > :is(li:hover, li:focus-within) {
-  background-color: hsl(10 79.7% 59.4% / 70%);
+  background-color: hsl(10, 79.7%, 59.4%, 70%);
 }
 
 ul.level1 > li.active {
@@ -244,18 +263,6 @@ ul.level2 a {
   clip-path: polygon(0 max(5%, 1rem), 0 100%, 100% 95%, 100% 0);
 }
 
-.slide img.align-top {
-  object-position: top;
-}
-
-.slide img .align-bottom {
-  object-position: bottom;
-}
-
-.landing .slide img {
-  clip-path: none;
-}
-
 .slide .text {
   display: grid;
   place-content: center;
@@ -265,7 +272,7 @@ ul.level2 a {
   max-height: min(40%, 4em);
   margin: 0;
   padding: min(var(--space-l), 1em) var(--space-m);
-  background-color: hsla(0, 0%, 15%, 80%);
+  background-color: hsl(0, 0%, 15%, 80%);
   color: hsl(0, 0%, 90%);
   font-size: min(4vw, 1.5em);
   text-align: center;
@@ -275,7 +282,6 @@ ul.level2 a {
 
 .slide :where(.prev, .next) {
   --size: max(6vw, 3rem);
-
   position: absolute;
   z-index: 1;
   top: calc(50% - 0.5 * var(--size));
@@ -301,25 +307,24 @@ ul.level2 a {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-/* COMMON RULES */
+/* ALL PAGES */
+
+#logo path {
+  fill: var(--color-text);
+}
+
+.social {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.copyright {
+  margin: 0;
+  text-align: center;
+}
 
 .content img {
   content-visibility: auto;
-}
-
-.image-left img,
-.image-right img {
-  margin-bottom: var(--space-m);
-}
-
-.image-left img {
-  margin-right: var(--space-l);
-  float: left;
-}
-
-.image-right img {
-  margin-left: var(--space-l);
-  float: right;
 }
 
 .related,
@@ -376,21 +381,19 @@ span.sign::before,
   margin: 0;
 }
 
-/* CONTENT TYPES */
+/* CUSTOM PAGES */
+
+:where(.landing, .blog, .blog-post) h1 {
+  display: none;
+}
+
+.landing .slide img {
+  clip-path: none;
+}
 
 .instructor img {
   aspect-ratio: 0.8;
   object-fit: cover;
-}
-
-blockquote:before {
-  content: "\201c";
-  color: var(--color-primary);
-  font-size: 5em;
-}
-
-blockquote > *:first-child {
-  margin-top: -3em;
 }
 
 .testimonial {
@@ -466,13 +469,12 @@ label {
 input,
 textarea {
   width: 100%;
-  padding: var(--space-s) var(--space-s);
-  font-family: inherit;
+  padding: var(--space-s);
 }
 
 button {
   margin-top: var(--space-m);
-  padding: var(--space-s) var(--space-s);
+  padding: var(--space-s);
 }
 
 .field {
@@ -492,11 +494,6 @@ button {
     display: flow-root;
   }
 
-  .section img {
-    width: 60%;
-    margin-bottom: var(--space-m);
-  }
-
   .instructor img,
   .intro img {
     width: 50%;
@@ -505,7 +502,7 @@ button {
   }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 50rem) {
   #main-header,
   #main-footer {
     justify-content: space-between;
@@ -524,8 +521,8 @@ button {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-  ::before,
-  ::after {
+  *::before,
+  *::after {
     transition-duration: 0s !important;
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
