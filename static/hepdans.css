@@ -78,7 +78,6 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body), sans-serif;
-  font-size: 1.125rem;
 }
 
 main {
@@ -503,6 +502,10 @@ button {
 }
 
 @media (min-width: 50rem) {
+  body {
+    font-size: 1.125rem;
+  }
+
   #main-header,
   #main-footer {
     justify-content: space-between;
