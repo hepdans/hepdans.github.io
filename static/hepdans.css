@@ -9,6 +9,9 @@
   --font-body: "Josefin Sans";
   --font-header: "Cormorant Garamond";
 
+  --width-normal: 65ch;
+  --width-large: 90ch;
+
   --space-xs: 0.25rem;
   --space-s: 0.5rem;
   --space-m: 1rem;
@@ -95,9 +98,9 @@ body > footer {
 }
 
 .content {
-  max-width: 65ch;
+  max-width: var(--width-normal);
   margin: 0 auto;
-  padding: var(--space-m);
+  padding: var(--space-l) var(--space-m);
 }
 
 #main-header,
@@ -117,7 +120,8 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--font-header), serif;
 }
 
@@ -128,18 +132,26 @@ h1 {
 }
 
 h2,
+h3,
 summary {
   color: var(--color-primary);
 }
 
+.content > *:first-child,
+.content > section:first-child > h2 {
+  margin-top: 0;
+}
+
 blockquote:before {
   content: "\201c";
+  display: block;
+  margin-top: var(--space-l);
   color: var(--color-primary);
   font-size: 5em;
 }
 
 blockquote > *:first-child {
-  margin-top: -3em;
+  margin-top: -1em;
 }
 
 table {
@@ -326,22 +338,26 @@ ul.level2 a {
   content-visibility: auto;
 }
 
-.related,
-:where(.testimonials, .events, .blog) div.content {
+.related {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--space-m);
 }
 
-.related p,
-.blog .post {
+.related article {
   width: 100%;
+}
+
+.related h3 {
+  margin-bottom: var(--space-s);
+}
+
+.related p {
+  margin-top: var(--space-s);
   font-size: 90%;
 }
 
-.related img,
-.blog .post img {
+.related img {
   width: 100%;
   aspect-ratio: 2.4;
   object-fit: cover;
@@ -371,13 +387,8 @@ ul.level2 a {
   text-align: right;
 }
 
-span.sign::before,
-.sign p::before {
+.sign::before {
   content: "— ";
-}
-
-.sign p {
-  margin: 0;
 }
 
 /* CUSTOM PAGES */
@@ -391,29 +402,34 @@ span.sign::before,
 }
 
 .instructor img {
-  aspect-ratio: 0.8;
+  margin-bottom: var(--space-s);
+  aspect-ratio: 3/4;
   object-fit: cover;
+}
+
+.instructor h2 {
+  margin: 0;
+}
+
+.instructor + .instructor {
+  margin-top: 2em;
 }
 
 .testimonial {
   margin: 0;
 }
 
-.events li {
-  list-style-type: none;
-}
-
 .landing .dances,
-.dances .content,
-.lessons .content {
+:where(.dances, .lessons) .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: var(--space-m);
 }
 
 .dances .dance,
 .lessons .lesson {
-  width: max(12em, 25%);
+  width: 10rem;
 }
 
 :where(article.dance, article.lesson) a {
@@ -425,16 +441,6 @@ span.sign::before,
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
-}
-
-.post img {
-  width: 100%;
-  aspect-ratio: 1.6;
-  object-fit: cover;
-}
-
-.post .meta {
-  display: none;
 }
 
 .events {
@@ -456,6 +462,16 @@ span.sign::before,
   aspect-ratio: 0.77778;
   object-fit: cover;
   border-radius: 1em;
+}
+
+.post img {
+  width: 100%;
+  aspect-ratio: 1.6;
+  object-fit: cover;
+}
+
+.post .meta {
+  display: none;
 }
 
 /* FORMS */
@@ -487,25 +503,19 @@ button {
 /* MEDIA QUERIES */
 
 @media (min-width: 25rem) {
-  .section,
   .instructor,
   .intro {
     display: flow-root;
   }
 
-  .instructor img,
-  .intro img {
+  :where(.instructor, .intro) img {
     width: 50%;
-    margin-right: var(--space-l);
+    margin-right: var(--space-m);
     float: left;
   }
 }
 
 @media (min-width: 50rem) {
-  body {
-    font-size: 1.125rem;
-  }
-
   #main-header,
   #main-footer {
     justify-content: space-between;
@@ -515,10 +525,17 @@ button {
     aspect-ratio: 2.4;
   }
 
+  :where(.testimonials, .events, .blog) div.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(var(--width-large) - var(--space-xl));
+  }
+
   .related article,
   .testimonial,
   .blog .post {
-    width: calc(50% - var(--space-s));
+    width: calc(50% - var(--space-m));
   }
 }
 
