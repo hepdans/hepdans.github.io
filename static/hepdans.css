@@ -43,13 +43,16 @@ svg {
   height: auto;
 }
 
+article,
+blockquote,
+details,
 figure,
 table {
   margin: 1em 0;
 }
 
 figcaption {
-  margin-top: 0.5em;
+  margin-top: 1em;
   text-align: center;
 }
 
@@ -100,7 +103,7 @@ body > footer {
 .content {
   max-width: var(--width-normal);
   margin: 0 auto;
-  padding: var(--space-l) var(--space-m);
+  padding: var(--space-m);
 }
 
 #main-header,
@@ -125,9 +128,9 @@ h3 {
   font-family: var(--font-header), serif;
 }
 
-h1 {
+h1.content {
   color: var(--color-bg);
-  font-size: 3em;
+  font-size: 3.2em;
   text-align: center;
 }
 
@@ -135,11 +138,6 @@ h2,
 h3,
 summary {
   color: var(--color-primary);
-}
-
-.content > *:first-child,
-.content > section:first-child > h2 {
-  margin-top: 0;
 }
 
 blockquote:before {
@@ -342,6 +340,7 @@ ul.level2 a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: var(--space-m);
 }
 
 .related article {
@@ -411,14 +410,6 @@ ul.level2 a {
   margin: 0;
 }
 
-.instructor + .instructor {
-  margin-top: 2em;
-}
-
-.testimonial {
-  margin: 0;
-}
-
 .landing .dances,
 :where(.dances, .lessons) .content {
   display: flex;
@@ -443,25 +434,26 @@ ul.level2 a {
   border-radius: 50%;
 }
 
-.events {
-  width: 100%;
+:where(.testimonials, .blog) div.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 var(--space-l);
+  max-width: var(--width-large);
 }
 
 .event-listing {
-  display: flex;
-  flex-wrap: wrap;
+  --n-columns: 1;
+  display: grid;
   gap: var(--space-l);
+  grid-template-columns: repeat(var(--n-columns), 1fr);
 }
 
-.event-card {
-  width: max(8rem, 30%);
-}
-
-.event-card img {
+article.event img {
   width: 100%;
   aspect-ratio: 0.77778;
   object-fit: cover;
-  border-radius: 1em;
+  border-radius: var(--space-s);
 }
 
 .post img {
@@ -488,7 +480,7 @@ textarea {
 }
 
 button {
-  margin-top: var(--space-m);
+  margin: 1em 0;
   padding: var(--space-s);
 }
 
@@ -504,14 +496,18 @@ button {
 
 @media (min-width: 25rem) {
   .instructor,
-  .intro {
+  .event .intro {
     display: flow-root;
   }
 
-  :where(.instructor, .intro) img {
+  :where(.instructor, .event .intro) img {
     width: 50%;
     margin-right: var(--space-m);
     float: left;
+  }
+
+  .event-listing {
+    --n-columns: 2;
   }
 }
 
@@ -525,17 +521,17 @@ button {
     aspect-ratio: 2.4;
   }
 
-  :where(.testimonials, .events, .blog) div.content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: calc(var(--width-large) - var(--space-xl));
+  .related article {
+    width: calc(50% - var(--space-s));
   }
 
-  .related article,
   .testimonial,
   .blog .post {
     width: calc(50% - var(--space-m));
+  }
+
+  .event-listing {
+    --n-columns: 3;
   }
 }
 
