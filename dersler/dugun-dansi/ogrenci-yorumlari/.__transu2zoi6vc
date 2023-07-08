@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Hep Dans — Kuşadası Hep Dans Camp</title>
-  <meta name="description" content="Hep Dans is a dance school in Istanbul, Turkey. Offers private and group lessons for Latin dances, especially Salsa and Bachacta. Organizes social events like Latin dance nights, dance camps and dance breakfasts. Choreographs wedding dances for couples and gets them ready for the ceremony.">
-  <meta name="keywords" content="dance, dancing, istanbul, cihangir, beyoğlu, taksim, levent, salsa, bachata, cha cha cha, rumba, jive, latin, dance school, dancing lessons, private lesson, group lesson, dance camp, latin night, wedding dance, first dance">
+  <title>Hep Dans — Öğrenci Yorumları</title>
+  <meta name="description" content="Hep Dans İstanbul&#39;da bulunan bir dans okuludur. Salsa ve Bachata başta olmak üzere Latin dansları için özel dersler ve grup dersleri verir. Latin dans geceleri, dans kampları ve danslı kahvaltı etkinlikleridüzenler. Evlenecek çiftlere düğün dansı koreografileri yapar ve törene hazırlar.">
+  <meta name="keywords" content="dans, istanbul, cihangir, beyoğlu, taksim, levent, salsa, bachata, cha cha cha, rumba, jive, latin, dans okulu, dans kursu, dans dersi, özel ders, grup dersi, dans kampı, latin gecesi, düğün dansı, ilk dans">
 
-  <link rel="shortcut icon" href="../../../../static/favicon.svg" type="image/svg">
-  <link rel="stylesheet" href="../../../../static/hepdans.css?h=87dfccaf">
+  <link rel="shortcut icon" href="../../../static/favicon.svg" type="image/svg">
+  <link rel="stylesheet" href="../../../static/hepdans.css?h=87dfccaf">
 
   
   
@@ -29,20 +29,20 @@
       
     <li tabindex="0">
       
-      <span class="menuitem">About us</span>
+      <span class="menuitem">Hakkımızda</span>
       <ul class="level2">
         
           
-        <li><a href="../../../about/">About us</a></li>
+        <li><a href="../../../hakkimizda/">Hakkımızda</a></li>
         
           
-        <li><a href="../../../about/instructors/">Instructors</a></li>
+        <li><a href="../../../hakkimizda/egitmenler/">Eğitmenler</a></li>
         
           
-        <li><a href="../../../about/testimonials/">Testimonials</a></li>
+        <li><a href="../../../hakkimizda/ogrenci-yorumlari/">Öğrenci Yorumları</a></li>
         
           
-        <li><a href="../../../about/frequenly-asked-questions/">Frequently Asked Questions</a></li>
+        <li><a href="../../../hakkimizda/sik-sorulan-sorular/">Sık Sorulan Sorular</a></li>
         
       </ul>
       
@@ -51,51 +51,26 @@
       
     <li tabindex="0">
       
-      <span class="menuitem">Dances</span>
+      <span class="menuitem">Danslar</span>
       <ul class="level2">
         
           
-        <li><a href="../../../dances/salsa/">Salsa</a></li>
+        <li><a href="../../../danslar/salsa/">Salsa</a></li>
         
           
-        <li><a href="../../../dances/bachata/">Bachata</a></li>
+        <li><a href="../../../danslar/bachata/">Bachata</a></li>
         
           
-        <li><a href="../../../dances/cha-cha-cha/">Cha Cha Cha</a></li>
+        <li><a href="../../../danslar/cha-cha-cha/">Cha Cha Cha</a></li>
         
           
-        <li><a href="../../../dances/merengue/">Merengue</a></li>
+        <li><a href="../../../danslar/merengue/">Merengue</a></li>
         
           
-        <li><a href="../../../dances/american-rumba/">American Rumba</a></li>
+        <li><a href="../../../danslar/amerikan-rumba/">Amerikan Rumba</a></li>
         
           
-        <li><a href="../../../dances/jive/">Jive</a></li>
-        
-      </ul>
-      
-    </li>
-    
-      
-    <li tabindex="0">
-      
-      <span class="menuitem">Lessons</span>
-      <ul class="level2">
-        
-          
-        <li><a href="../../../lessons/private-lessons/">Private Lessons</a></li>
-        
-          
-        <li><a href="../../../lessons/group-lessons/">Group Lessons</a></li>
-        
-          
-        <li><a href="../../../lessons/child-dances/">Child Dances</a></li>
-        
-          
-        <li><a href="../../../lessons/company-events/">Company Events</a></li>
-        
-          
-        <li><a href="../../../lessons/wedding-dance/">Wedding Dance</a></li>
+        <li><a href="../../../danslar/jive/">Jive</a></li>
         
       </ul>
       
@@ -104,20 +79,45 @@
       
     <li class="active" tabindex="0">
       
-      <span class="menuitem">Events</span>
+      <span class="menuitem">Dersler</span>
       <ul class="level2">
         
           
-        <li><a href="../">Current Events</a></li>
+        <li><a href="../../ozel-dersler/">Özel Dersler</a></li>
         
           
-        <li><a href="../../dance-camps/">Dance Camps</a></li>
+        <li><a href="../../grup-dersleri/">Grup Dersleri</a></li>
         
           
-        <li><a href="../../dance-nights/">Dance Nights</a></li>
+        <li><a href="../../cocuk-danslari/">Çocuk Dansları</a></li>
         
           
-        <li><a href="../../dance-breakfasts/">Dance Breakfasts</a></li>
+        <li><a href="../../sirket-ve-kurumlarda-dans/">Şirket ve Kurumlarda Dans</a></li>
+        
+          
+        <li><a href="../">Düğün Dansı</a></li>
+        
+      </ul>
+      
+    </li>
+    
+      
+    <li tabindex="0">
+      
+      <span class="menuitem">Etkinlikler</span>
+      <ul class="level2">
+        
+          
+        <li><a href="../../../etkinlikler/guncel-etkinlikler/">Güncel Etkinlikler</a></li>
+        
+          
+        <li><a href="../../../etkinlikler/dans-kamplari/">Dans Kampları</a></li>
+        
+          
+        <li><a href="../../../etkinlikler/dans-geceleri/">Dans Geceleri</a></li>
+        
+          
+        <li><a href="../../../etkinlikler/dans-kahvaltilari/">Dans Kahvaltıları</a></li>
         
       </ul>
       
@@ -133,7 +133,7 @@
       
     <li tabindex="0">
       
-      <a href="../../../contact/" class="menuitem">Contact</a>
+      <a href="../../../iletisim/" class="menuitem">İletişim</a>
       
     </li>
     
@@ -143,15 +143,15 @@
 
       
       
-<nav id="alternatives-nav" aria-label="language navigation">
+<nav id="alternatives-nav" aria-label="dil linkleri">
   <ul>
     
     <li lang="tr">
-      <a href="../../../../etkinlikler/guncel-etkinlikler/kusadasi-hep-dans-kampi-2023/">Türkçe</a>
+      <a href="./">Türkçe</a>
     </li>
     
     <li lang="en">
-      <a href="./">English</a>
+      <a href="../../../en/lessons/wedding-dance/testimonials/">English</a>
     </li>
     
   </ul>
@@ -160,199 +160,122 @@
     </div>
   </header>
 
-  <main class="event">
+  <main class="testimonials">
     <div class="heading">
       
 
-      <h1 class="content">Kuşadası Hep Dans Camp</h1>
+      <h1 class="content">Öğrenci Yorumları</h1>
     </div>
 
     <div class="content">
       
-<div class="intro">
-  <img width="848" height="1200" loading="lazy" src="../../../../etkinlikler/guncel-etkinlikler/kusadasi-hep-dans-kampi-2023/afis.jpg" alt="Event poster">
+  
 
-  <p>
+  
+
+  
+  
     
-      Friday, May 19, 2023
+      <blockquote class="testimonial">
+  <p>Dans kariyerleri ilkokul müsamerelerinde halk oyunları ile başlayıp biten biz iki şaşkın düğün dansımız için bizi çok aşacak bir şarkı ve dansa heves etmiştik :) Hande sağolsun hiç hevesimizi kırmadan sabırla ve daha önemlisi zevkle koreografimizde bize yardımcı oldu. Hem çok eğlendik hem de sayesinde dans etmeyi pek sevdik. Son anda gelinliğin azizliği ile hakkını tam veremesek de çok eğlenceli ve orijinal bir düğün dansımız oldu sayesinde. Üstelik sexy çiçek atma kareografim de hediyesi. Tekrar çok teşekkür ederiz!</p>
+  <footer>
+    <p class="sign">
+      Nazlı &amp; Burç<br>
       
-      <br>
-      - Sunday, May 21, 2023
+    </p>
+    
+  </footer>
+</blockquote>
+    
+      <blockquote class="testimonial">
+  <p>Dans konusunda hicbir fikrimiz yokken, kısa sürede bizi hazır eden, her hatamızı sabırla düzelten, enerjisiyle hem eğlenip hem öğreten Hande Hoca'ya çok teşekkür ederiz. Bu özel günümüzün imzasını daha güzel atamazdık.</p>
+  <footer>
+    <p class="sign">
+      Nensi &amp; Cem<br>
       
+    </p>
     
-  </p>
-
-  <p>We're going to Kuşadası on May 19-21!</p>
-<p>An unforgettable dance camp awaits you with visits to the ancient city of Ephesus and Şirince, workshops, and dance parties!</p>
-<p>We're making a quick entry into summer and enjoying the taste of spring to the fullest!</p>
-<p>At Casa Del Sole Hotel, we'll have all-inclusive accommodation with dance, tours, and sea views.</p>
-</div>
-
-  
+  </footer>
+</blockquote>
     
-<div class="section">
-
-
-
-
-<p>Workshops:</p>
-<p>Oğuz Kurtili - Cuban dances</p>
-<p>Hande Ermiş - Salsa, Bachata, Cha cha cha</p>
-<p>Halil Doğan - Cuban dances</p>
-
-
-</div>
-
-  
+      <blockquote class="testimonial">
+  <p>Düğünümüze 1 hafta kala bize sabırla dans etmeyi öğreten Hande hanım’a teşekkür ediyoruz. Esnek ve yapıcı yapısı ile tüm telaşımızı yatıştırdı. Kısa zamanda bizi iyi bir seviyeye getirdi. Tüm çiftlere şiddetle tavsiye ederiz 🙂</p>
+  <footer>
+    <p class="sign">
+      Ayşe &amp; Buğra<br>
+      
+    </p>
     
-<div class="section">
-
-
-
-
-<p>Price</p>
-<ul>
-<li>2 nights accommodation (all-inclusive)</li>
-<li>Transfer from Istanbul to Kuşadası (with TURSAB certified vehicle)</li>
-<li>Visit to the ancient city of Ephesus with a licensed tour guide</li>
-<li>Visit to Şirince</li>
-<li>All workshops and parties included</li>
-</ul>
-<p>Single person in a double room: 5565 TL*</p>
-<p>Single room: 6465 TL</p>
-<p>* We will match those who want to stay in a double room but don't have a roommate from the list.</p>
-
-
-</div>
-
-  
+  </footer>
+</blockquote>
     
-<section>
-  <h2>19 - 21 MAY KUŞADASI HEP DANS CAMP PROGRAM:</h2>
-
-
-
-
-<table>
-<caption>Night of May 18th to May 19th</caption>
-<tbody>
-<tr>
-<td>00:00</td>
-<td>Departure from Mecidiyeköy</td>
-</tr>
-<tr>
-<td>01.00</td>
-<td>Departure from Kadıköy Marriage Office</td>
-</tr>
-<tr>
-<td>09.00</td>
-<td>Arrival in Şirince, breakfast in Şirince</td>
-</tr>
-<tr>
-<td>12.00</td>
-<td>Departure to the hotel</td>
-</tr>
-<tr>
-<td>12.45</td>
-<td>Arrival at the hotel and free time</td>
-</tr>
-<tr>
-<td>14.00</td>
-<td>Check in</td>
-</tr>
-<tr>
-<td>14.30</td>
-<td>Lunch at the hotel and free time</td>
-</tr>
-<tr>
-<td>16.00</td>
-<td>Workshop</td>
-</tr>
-<tr>
-<td>17.00</td>
-<td>Workshop</td>
-</tr>
-<tr>
-<td>19.30</td>
-<td>Dinner</td>
-</tr>
-<tr>
-<td>21.00</td>
-<td>Dance party</td>
-</tr>
-</tbody>
-</table>
-<table>
-<caption>May 20th Saturday</caption>
-<tbody>
-<tr>
-<td>07.30</td>
-<td>Breakfast</td>
-</tr>
-<tr>
-<td>08.30</td>
-<td>Departure to Mary's House</td>
-</tr>
-<tr>
-<td>09.30</td>
-<td>Arrival at Mary's House and museum visit</td>
-</tr>
-<tr>
-<td>10.15</td>
-<td>Arrival at the Ancient City of Ephesus</td>
-</tr>
-<tr>
-<td>13.15</td>
-<td>Efes Antik Kenti’nden otele hareket</td>
-</tr>
-<tr>
-<td>14.15</td>
-<td>Departure from the Ancient City of Ephesus to the hotel</td>
-</tr>
-<tr>
-<td>16.00</td>
-<td>Workshop</td>
-</tr>
-<tr>
-<td>17.00</td>
-<td>Workshop</td>
-</tr>
-<tr>
-<td>19.30</td>
-<td>Dinner</td>
-</tr>
-<tr>
-<td>21.00</td>
-<td>Dance party</td>
-</tr>
-</tbody>
-</table>
-<table>
-<caption>May 21st Sunday</caption>
-<tbody>
-<tr>
-<td>09:00</td>
-<td>Breakfast and free time</td>
-</tr>
-<tr>
-<td>12:00</td>
-<td>Check out and departure to Istanbul</td>
-</tr>
-<tr>
-<td>21:00</td>
-<td>Arrival at Kadıköy Marriage Office</td>
-</tr>
-<tr>
-<td>22:00</td>
-<td>Arrival at Mecidiyeköy</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
+      <blockquote class="testimonial">
+  <p>Geriye dönüp tüm hazırlık sürecimize baktığımızda iyi ki yaptık dediğimiz, her anından keyif aldığımız kararlarımızdan biriydi, dans dersi almamız... özellikle de Hande hoca’yla birlikte... bizi anlayan ve dans konusunda yükselten anlayışıyla eğlenerek düğünümüzde dans ettik ve bol alkış aldık. Bu arada en temel adımlardan, duruş pozisyonlarına kadar bir çok güzel bilgiyi de kefemize doldurduk...</p>
+<p>Teşekkür ve sevgilerimizle.</p>
+  <footer>
+    <p class="sign">
+      Deniz &amp; Özgür<br>
+      
+    </p>
+    
+  </footer>
+</blockquote>
+    
+      <blockquote class="testimonial">
+  <p>30 Temmuz'daki düğünümüzün ilk dansı için tabii ki Hande Hoca'nın kapısını çaldık. Kısa bir sürede bizim için harika bir koreografi hazırladı; üstelik müzik seçiminde de çok faydalı yönlendirmeleri oldu. Bizim için en önemlisi dansın doğal olması ve bizi anın büyüsünden uzaklaştırmamasıydı. Dersler sırasında bizi sabırla dinledi, istediğimiz figürleri koreografiye yerleştirmeye özen gösterdi. Çok coştuğumuzda da sakinleştirdi:) Hem bizim için kolay akılda kalan, hem -duvağımın çıkmamasına rağmen- doğal ve estetik bir dans oldu. Konuklarımızdan şahane geri dönüşler aldık. Üstelik dersler o kadar keyifliydi ki, düğün öncesi koşturmacasında bize terapi gibi geldi.</p>
+  <footer>
+    <p class="sign">
+      Tanla &amp; Denizer<br>
+      
+    </p>
+    
+  </footer>
+</blockquote>
+    
+      <blockquote class="testimonial">
+  <p>Hande Hanım, yaratıcı koreografisi ve şarkı seçimindeki desteğiyle düğünümüzde unutulmayacak, oldukça eğlenceli bir ilk dans yapmamızı sağladı. En ince detaylara kadar dansımızın mükemmel olması için çabaladı. Kendisiyle çalıştığımız için çok mutluyuz!</p>
+  <footer>
+    <p class="sign">
+      Yeşim &amp; Ersin<br>
+      
+    </p>
+    
+  </footer>
+</blockquote>
+    
+      <blockquote class="testimonial">
+  <p>Herkesin olduğu gibi bizim de en özel günümüzdü.</p>
+<p>Akılda kalalım, tekrar tekrar izleyip gülelim istedik.</p>
+<p>1 hafta gibi çok kısa bir sürede neler yapabildiğimize biz de inanamadık.</p>
+<p>Biz çok eğlendik, akılda da kaldık=)</p>
+<p>Dans dersini iyi ki almışız. İzleyenler de çok beğendi.</p>
+<p>Ellerinize sağlık Hande Hanım, sayenizde çok güzel geçti.</p>
+  <footer>
+    <p class="sign">
+      Sima &amp; Murat<br>
+      
+    </p>
+    
+  </footer>
+</blockquote>
+    
+      <blockquote class="testimonial">
+  <p>İkimizin de dans tecrübesi hiç yoktu. Taa ki Hande hocamız ile tanışıp, o cesareti, dans keyfini yakalayıncaya kadar..</p>
+<p>Hocamızla tüm dersler ayrı güzel, ayrı keyifliydi.. Müzik seçimi, ritmi yakalamak, onla hareket etmek bizi daha da mutlu etti (hocamız bu süreçte cok yoruldu, sabretti, azmetti bize dayandı!!)</p>
+<p>Kuyruklu gelinlik ve en uzun duvağı seçmeme rağmen, üstelik kolları tül olan (hareket kısıtı) bir gelinliğim olmasına rağmen hocamız tüm bu zorluklara o kadar güzel estetik çözümler buldu ki ... bizi izleyen herkesin şaşkınlık ve tebessüm dolu bakışlarını videomuzu izlerken gördük.</p>
+<p>Ve o gün, herkesin gözü önünde dansimizi yaptık, aklımızda ve belki düğün konuklarımızın aklında kalan en güzel an buydu..</p>
+<p>Hocam dansı bize sevdirdiğiniz için, düğün günümüzde yanımızda olduğunuz ve samimiyetiniz için teşekkürler.</p>
+  <footer>
+    <p class="sign">
+      Ceren &amp; Dursun<br>
+      
+    </p>
+    
+  </footer>
+</blockquote>
+    
   
+
 
     </div>
 
@@ -372,7 +295,7 @@
 
       <p class="copyright">
         <small>
-          All rights reserved. Content cannot be used without permission.<br>
+          Tüm hakları saklıdır. İçerikler izinsiz kullanılamaz.<br>
           Hep Dans &copy; 2023
         </small>
       </p>
