@@ -455,7 +455,7 @@ figcaption {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 45%;
+  border-radius: var(--space-m);
 }
 
 .callout {
@@ -498,6 +498,16 @@ main.landing .slide img {
 
 main:is(.testimonials, .events, .past-events, .blog) .content {
   --width-content: var(--content-width-large);
+}
+
+article.current-events {
+  padding: var(--space-xs) var(--space-m);
+  border-radius: var(--space-m);
+  background-color: hsl(0, 0%, calc(var(--text-l) - 60%));
+}
+
+article.current-events h3 {
+  text-transform: uppercase;
 }
 
 .instructor {
