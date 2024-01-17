@@ -129,7 +129,7 @@ h3 {
 
   --font-shrink: 85%;
 
-  --content-width-large: 95ch;
+  --content-width-large: 100ch;
   --content-width-narrow: 65ch;
 
   --logo-height: 3.5rem;
@@ -231,7 +231,6 @@ body > footer {
 }
 
 .copyright {
-  margin: 0;
   text-align: center;
 }
 
@@ -332,7 +331,6 @@ nav li {
 
 .slide img {
   width: 100%;
-  max-height: calc(100svh - var(--header-height) - var(--title-height));
   aspect-ratio: 16/9;
   object-fit: cover;
   clip-path: polygon(0 0, 0 100%, 100% 95%, 100% 0);
@@ -342,7 +340,7 @@ nav li {
   position: absolute;
   inset-block-end: 0;
   inline-size: 100%;
-  padding: 1em var(--space-m);
+  padding: var(--space-m);
   background-color: hsl(0, 0%, 15%, 80%);
   font-size: min(4vw, 1.6em);
   text-align: center;
@@ -429,7 +427,7 @@ figcaption {
 }
 
 .related article {
-  width: calc(50% - var(--space-s));
+  inline-size: calc(50% - 0.5 * var(--space-m));
 }
 
 .related img {
@@ -490,20 +488,16 @@ figcaption {
 
 /* SPECIAL RULES */
 
-main:is(.landing, .blog, .blog-post) {
+main.landing {
   --title-height: 0rem;
-}
-
-main:is(.landing, .blog, .blog-post) h1 {
-  display: none;
-}
-
-main:is(.testimonials, .events, .past-events, .blog) .content {
-  --width-content: var(--content-width-large);
 }
 
 main.landing .slide img {
   clip-path: none;
+}
+
+main:is(.testimonials, .events, .past-events, .blog) .content {
+  --width-content: var(--content-width-large);
 }
 
 .instructor {
@@ -539,6 +533,27 @@ main.landing .slide img {
   block-size: 0.4em;
   color: var(--color-primary);
   font-size: 5em;
+}
+
+.outer {
+  position: relative;
+}
+
+.outer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  background-position: 60%;
+  background-size: cover;
+  filter: opacity(20%);
+}
+
+.outer .content {
+  max-width: min(calc(0.6 * var(--width-content)), 45%);
+  margin-inline-start: max(calc(100% - 0.5 * var(--content-width-large)), 50%);
+  background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 20%), 0.85);
 }
 
 .events .event-listing {
@@ -658,6 +673,12 @@ th {
 
   main:is(.testimonials, .blog) .content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-height: 50rem) {
+  .slide img {
+    max-height: calc(100svh - var(--header-height) - var(--title-height) - var(--space-xl));
   }
 }
 
