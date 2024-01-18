@@ -501,13 +501,19 @@ main:is(.testimonials, .events, .past-events, .blog) .content {
 }
 
 article.current-events {
+  min-inline-size: 12rem;
   padding: var(--space-xs) var(--space-m);
   border-radius: var(--space-m);
   background-color: hsl(0, 0%, calc(var(--text-l) - 60%));
 }
 
 article.current-events h3 {
-  text-transform: uppercase;
+  font: inherit;
+  text-align: end;
+}
+
+dd + dt {
+  margin-block-start: var(--space-s);
 }
 
 .instructor {
@@ -561,7 +567,7 @@ article.current-events h3 {
 }
 
 .outer .content {
-  max-width: min(calc(0.6 * var(--width-content)), 45%);
+  max-width: calc(0.6 * var(--width-content));
   margin-inline-start: max(calc(100% - 0.5 * var(--content-width-large)), 50%);
   background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 20%), 0.85);
 }
