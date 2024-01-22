@@ -448,6 +448,7 @@ figcaption {
 }
 
 .card {
+  position: relative;
   width: max(8rem, 30%);
 }
 
@@ -457,6 +458,33 @@ figcaption {
   object-fit: cover;
   border: 1px solid var(--color-primary);
   border-radius: var(--space-m);
+}
+
+.card figcaption {
+  position: absolute;
+  inset-block-end: -0.85em;
+  inset-inline-end: var(--space-m);
+  block-size: fit-content;
+  inline-size: fit-content;
+  margin: 0;
+  padding: var(--space-xs) var(--space-s);
+  font-size: var(--font-shrink);
+}
+
+.card figcaption::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: skew(-10deg);
+  background-color: var(--color-primary);
+}
+
+.card figcaption a {
+  position: relative;
+  inset-block-end: -0.15em;
+  z-index: 1;
+  color: var(--color-text);
+  text-decoration: none;
 }
 
 .callout {
@@ -502,19 +530,15 @@ main:is(.testimonials, .events, .past-events, .blog) .content {
 }
 
 article.current-events {
-  block-size: fit-content;
   min-inline-size: 12rem;
   padding: var(--space-xs) var(--space-m);
   border-radius: var(--space-m);
   background-color: hsl(0, 0%, calc(var(--text-l) - 60%));
-  font-size: var(--font-shrink);
   text-transform: uppercase;
 }
 
-article.current-events h3 {
-  margin-block-start: var(--space-l);
-  font: inherit;
-  text-align: end;
+article.current-events dl {
+  font-size: var(--font-shrink);
 }
 
 dt {
