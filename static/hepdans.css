@@ -444,7 +444,7 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: var(--space-m);
+  gap: var(--space-l);
 }
 
 .card {
@@ -502,15 +502,23 @@ main:is(.testimonials, .events, .past-events, .blog) .content {
 }
 
 article.current-events {
+  block-size: fit-content;
   min-inline-size: 12rem;
   padding: var(--space-xs) var(--space-m);
   border-radius: var(--space-m);
   background-color: hsl(0, 0%, calc(var(--text-l) - 60%));
+  font-size: var(--font-shrink);
+  text-transform: uppercase;
 }
 
 article.current-events h3 {
+  margin-block-start: var(--space-l);
   font: inherit;
   text-align: end;
+}
+
+dt {
+  margin-block-end: var(--space-xs);
 }
 
 dd + dt {
