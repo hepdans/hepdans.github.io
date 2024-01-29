@@ -11,38 +11,9 @@
   <link rel="preload" as="image" href="bachata-1.jpg"/>
   <style>
     .outer::before {
-      background-image: url('bachata-3.jpg');
+      background-image: url('bachata-2.jpg');
     }
   </style>
-  <style>
-    @keyframes next_slide {
-      49.0% {
-        transform: translateX(0);
-      }
-      50.0% {
-        transform: translateX(-100%);
-      }
-      99.0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-  </style>
-  <script>
-    window.addEventListener("DOMContentLoaded", (ev) => {
-        document.querySelectorAll("a[data-dst]").forEach((b) => {
-            b.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelectorAll(".slides").forEach((s) => {
-                    s.getAnimations().forEach((a) => { a.cancel(); });
-                    s.style.transform = "translateX(" + (1 - b.dataset.dst) * 100 + "%)";
-                });
-            });
-        });
-    });
-  </script>
 </head>
 <body>
   <header>
@@ -69,6 +40,7 @@
             <li><a href="../merengue/">Merengue</a></li>
             <li><a href="../amerikan-rumba/">Amerikan Rumba</a></li>
             <li><a href="../jive/">Jive</a></li>
+            <li><a href="../styling/">Styling</a></li>
           </ul>
         </li>
         <li tabindex="0">
@@ -106,14 +78,9 @@
     </nav>
   </header>
   <main class="page">
-    <div class="slides" aria-label="slaytlar" style="--n-slides: 2">
+    <div class="slides" aria-label="slaytlar" style="--n-slides: 1">
       <div class="slide">
         <img width="1200" height="675" src="bachata-1.jpg" alt=""/>
-        <a href="." class="next" data-dst="2">Next</a>
-      </div>
-      <div class="slide">
-        <img width="1200" height="675" src="bachata-2.jpg" alt=""/>
-        <a href="." class="prev" data-dst="1">Prev</a>
       </div>
     </div>
     <h1>Bachata</h1>
